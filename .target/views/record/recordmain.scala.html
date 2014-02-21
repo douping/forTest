@@ -1,0 +1,69 @@
+@(records:List[Record])
+@import helper._
+@import helper.twitterBootstrap._
+@main("s"){
+	<div class="content-link">
+			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
+			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
+			<p><a href="@controllers.designer.routes.Designer.designermain">技师管理</a></p>
+			<p>预约管理</p>
+				<ul>
+					<li><a href="@controllers.record.routes.Records.recordmain">预约查看</a></li>
+				</ul>
+			<p><a href = "#" target = "salon_main">评论管理</a></p>
+			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
+			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
+			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
+			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
+	</div>	
+	<div class="content-core">
+		<p>总计N个预约</p>
+		<div>                           
+                                         开始日期：<input type="date">
+                                          技师名：<input name="date" style="width:70px;">
+            	服务状态：<select>
+            		<option value="0">已预约 </option>
+            		<option value="1">已消费</option>
+            		<option value="2">已过期</option>
+            		<option value="-1">已取消</option>
+            	</select>                               
+            <input type="button" value="搜索" onclick="toPage(1);"/>
+            
+        </div>
+		<table border="1px solid black" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr>
+					<td>预约号</td>
+					<td>服务开始时间</td>
+					<td>服务结束时间</td>
+					<td>服务套餐</td>
+					<td>预约会员名</td>
+					<td>会员联系</td>
+					<td>服务担当人员</td>
+					<td>服务状态</td>
+					<td>总计收费</td>
+					<td>状态操作</td>
+				</tr>
+			</thead>
+			<tbody>
+			@records.map{reg =>
+				<tr>
+					<td>@reg.id</td>                        
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>--</td>
+					<td>
+					<input type="button" onclick='window.location.href="#";' value="取消预约"/>&nbsp;
+					<input type="button" value="详情查看" onclick="window.location.href='@controllers.record.routes.Records.recordview';"/>
+					</td>
+				</tr>
+				}
+			</tbody>
+		</table>
+	</div>
+}
