@@ -31,6 +31,7 @@ Seq[Any](format.raw/*1.35*/("""
 			<p>预约管理</p>
 				<ul>
 					<li><a href=""""),_display_(Seq[Any](/*11.20*/controllers/*11.31*/.record.routes.Records.recordmain)),format.raw/*11.64*/("""">预约查看</a></li>
+					<li><a href=""""),_display_(Seq[Any](/*12.20*/controllers/*12.31*/.record.routes.Records.selectDesignerRecord)),format.raw/*12.74*/("""">技师日程查看</a></li>
 				</ul>
 			<p><a href = "#" target = "salon_main">评论管理</a></p>
 			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
@@ -39,7 +40,7 @@ Seq[Any](format.raw/*1.35*/("""
 			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
 	</div>	
 	<div class="content-core">
-		<p>总计<span>"""),_display_(Seq[Any](/*20.15*/count)),format.raw/*20.20*/("""</span>个预约</p>
+		<p>总计<span>"""),_display_(Seq[Any](/*21.15*/count)),format.raw/*21.20*/("""</span>个预约</p>
 		<div>                           
                                          开始日期：<input type="date">&nbsp;&nbsp;
                                         
@@ -54,7 +55,7 @@ Seq[Any](format.raw/*1.35*/("""
            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             
-            <input type="button" value="添加预约">
+            <a href=""""),_display_(Seq[Any](/*36.23*/controllers/*36.34*/.record.routes.Records.addRecord)),format.raw/*36.66*/("""">添加预约</a>
         </div>
 		<table border="1px solid black" cellspacing="0" cellpadding="0">
 			<thead>
@@ -72,38 +73,38 @@ Seq[Any](format.raw/*1.35*/("""
 				</tr>
 			</thead>
 			<tbody>
-				"""),_display_(Seq[Any](/*53.6*/records/*53.13*/.map/*53.17*/{re=>_display_(Seq[Any](format.raw/*53.22*/("""
+				"""),_display_(Seq[Any](/*54.6*/records/*54.13*/.map/*54.17*/{re=>_display_(Seq[Any](format.raw/*54.22*/("""
 				<tr>
-					<td><a href=""""),_display_(Seq[Any](/*55.20*/controllers/*55.31*/.record.routes.Records.recordview)),format.raw/*55.64*/("""">"""),_display_(Seq[Any](/*55.67*/re/*55.69*/.id)),format.raw/*55.72*/("""</a></td>                        
-					<td>"""),_display_(Seq[Any](/*56.11*/re/*56.13*/.serviceStart)),format.raw/*56.26*/("""</td>
-					<td>"""),_display_(Seq[Any](/*57.11*/re/*57.13*/.serviceEnd)),format.raw/*57.24*/("""</td>
-					<td>"""),_display_(Seq[Any](/*58.11*/re/*58.13*/.serviceItem)),format.raw/*58.25*/("""</td>
-					<td>"""),_display_(Seq[Any](/*59.11*/re/*59.13*/.userName)),format.raw/*59.22*/("""</td>
-					<td>"""),_display_(Seq[Any](/*60.11*/re/*60.13*/.userPhone)),format.raw/*60.23*/("""</td>
-					<td>"""),_display_(Seq[Any](/*61.11*/re/*61.13*/.serviceDesigner)),format.raw/*61.29*/("""</td>
+					<td><a href=""""),_display_(Seq[Any](/*56.20*/controllers/*56.31*/.record.routes.Records.recordview)),format.raw/*56.64*/("""">"""),_display_(Seq[Any](/*56.67*/re/*56.69*/.id)),format.raw/*56.72*/("""</a></td>                        
+					<td>"""),_display_(Seq[Any](/*57.11*/re/*57.13*/.serviceStart)),format.raw/*57.26*/("""</td>
+					<td>"""),_display_(Seq[Any](/*58.11*/re/*58.13*/.serviceEnd)),format.raw/*58.24*/("""</td>
+					<td>"""),_display_(Seq[Any](/*59.11*/re/*59.13*/.serviceItem)),format.raw/*59.25*/("""</td>
+					<td>"""),_display_(Seq[Any](/*60.11*/re/*60.13*/.userName)),format.raw/*60.22*/("""</td>
+					<td>"""),_display_(Seq[Any](/*61.11*/re/*61.13*/.userPhone)),format.raw/*61.23*/("""</td>
+					<td>"""),_display_(Seq[Any](/*62.11*/re/*62.13*/.serviceDesigner)),format.raw/*62.29*/("""</td>
 					
 						<td>
-						"""),_display_(Seq[Any](/*64.8*/if(re.serviceStatus==1)/*64.31*/{_display_(Seq[Any](format.raw/*64.32*/("""
+						"""),_display_(Seq[Any](/*65.8*/if(re.serviceStatus==1)/*65.31*/{_display_(Seq[Any](format.raw/*65.32*/("""
 						已过期
-						""")))})),format.raw/*66.8*/("""
-						"""),_display_(Seq[Any](/*67.8*/if(re.serviceStatus==2)/*67.31*/{_display_(Seq[Any](format.raw/*67.32*/("""
+						""")))})),format.raw/*67.8*/("""
+						"""),_display_(Seq[Any](/*68.8*/if(re.serviceStatus==2)/*68.31*/{_display_(Seq[Any](format.raw/*68.32*/("""
 						预约中	
-						""")))})),format.raw/*69.8*/("""
-						"""),_display_(Seq[Any](/*70.8*/if(re.serviceStatus==0)/*70.31*/{_display_(Seq[Any](format.raw/*70.32*/("""
+						""")))})),format.raw/*70.8*/("""
+						"""),_display_(Seq[Any](/*71.8*/if(re.serviceStatus==0)/*71.31*/{_display_(Seq[Any](format.raw/*71.32*/("""
 						已消费
-						""")))})),format.raw/*72.8*/("""
+						""")))})),format.raw/*73.8*/("""
 					</td>
-					<td>"""),_display_(Seq[Any](/*74.11*/re/*74.13*/.costTotal)),format.raw/*74.23*/("""</td>
+					<td>"""),_display_(Seq[Any](/*75.11*/re/*75.13*/.costTotal)),format.raw/*75.23*/("""</td>
 					<td>
 					<input type="button" onclick='window.location.href="#";' value="取消预约"/>&nbsp;
 					
 					</td>
 				</tr>
-				""")))})),format.raw/*80.6*/("""
+				""")))})),format.raw/*81.6*/("""
 			</tbody>
 		</table>
 	</div>
-""")))})),format.raw/*84.2*/("""
+""")))})),format.raw/*85.2*/("""
 """))}
     }
     
@@ -116,11 +117,11 @@ Seq[Any](format.raw/*1.35*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Feb 21 08:40:58 CST 2014
+                    DATE: Fri Feb 21 18:42:25 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/recordmain.scala.html
-                    HASH: 9d8b3126d00ddb8fb9af4af9e8359adc3008d30c
-                    MATRIX: 579->1|758->34|795->90|812->99|850->100|1080->295|1099->306|1158->344|1255->405|1275->416|1330->449|1765->848|1792->853|2952->1978|2968->1985|2981->1989|3024->1994|3091->2025|3111->2036|3166->2069|3205->2072|3216->2074|3241->2077|3322->2122|3333->2124|3368->2137|3421->2154|3432->2156|3465->2167|3518->2184|3529->2186|3563->2198|3616->2215|3627->2217|3658->2226|3711->2243|3722->2245|3754->2255|3807->2272|3818->2274|3856->2290|3924->2323|3956->2346|3995->2347|4046->2367|4090->2376|4122->2399|4161->2400|4213->2421|4257->2430|4289->2453|4328->2454|4379->2474|4439->2498|4450->2500|4482->2510|4650->2647|4718->2684
-                    LINES: 19->1|25->1|26->4|26->4|26->4|30->8|30->8|30->8|33->11|33->11|33->11|42->20|42->20|75->53|75->53|75->53|75->53|77->55|77->55|77->55|77->55|77->55|77->55|78->56|78->56|78->56|79->57|79->57|79->57|80->58|80->58|80->58|81->59|81->59|81->59|82->60|82->60|82->60|83->61|83->61|83->61|86->64|86->64|86->64|88->66|89->67|89->67|89->67|91->69|92->70|92->70|92->70|94->72|96->74|96->74|96->74|102->80|106->84
+                    HASH: 6dce692e7b7b152b7f59cee6dac22d64fb77b233
+                    MATRIX: 579->1|758->34|795->90|812->99|850->100|1080->295|1099->306|1158->344|1255->405|1275->416|1330->449|1402->485|1422->496|1487->539|1924->940|1951->945|2738->1696|2758->1707|2812->1739|3207->2099|3223->2106|3236->2110|3279->2115|3346->2146|3366->2157|3421->2190|3460->2193|3471->2195|3496->2198|3577->2243|3588->2245|3623->2258|3676->2275|3687->2277|3720->2288|3773->2305|3784->2307|3818->2319|3871->2336|3882->2338|3913->2347|3966->2364|3977->2366|4009->2376|4062->2393|4073->2395|4111->2411|4179->2444|4211->2467|4250->2468|4301->2488|4345->2497|4377->2520|4416->2521|4468->2542|4512->2551|4544->2574|4583->2575|4634->2595|4694->2619|4705->2621|4737->2631|4905->2768|4973->2805
+                    LINES: 19->1|25->1|26->4|26->4|26->4|30->8|30->8|30->8|33->11|33->11|33->11|34->12|34->12|34->12|43->21|43->21|58->36|58->36|58->36|76->54|76->54|76->54|76->54|78->56|78->56|78->56|78->56|78->56|78->56|79->57|79->57|79->57|80->58|80->58|80->58|81->59|81->59|81->59|82->60|82->60|82->60|83->61|83->61|83->61|84->62|84->62|84->62|87->65|87->65|87->65|89->67|90->68|90->68|90->68|92->70|93->71|93->71|93->71|95->73|97->75|97->75|97->75|103->81|107->85
                     -- GENERATED --
                 */
             

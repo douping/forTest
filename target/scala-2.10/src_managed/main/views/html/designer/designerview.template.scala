@@ -37,11 +37,9 @@ Seq[Any](format.raw/*1.19*/("""
 	</p>
 	<ul>
 		<li><a href=""""),_display_(Seq[Any](/*17.17*/controllers/*17.28*/.designer.routes.Designer.designermain)),format.raw/*17.66*/("""">我的技师</a></li>
-		<li><a
-			href=""""),_display_(Seq[Any](/*19.11*/controllers/*19.22*/.designer.routes.Designer.designersearch)),format.raw/*19.62*/("""">技师搜索</a></li>
 	</ul>
 	<p>
-		<a href=""""),_display_(Seq[Any](/*22.13*/controllers/*22.24*/.record.routes.Records.recordmain)),format.raw/*22.57*/("""">预约管理</a>
+		<a href=""""),_display_(Seq[Any](/*20.13*/controllers/*20.24*/.record.routes.Records.recordmain)),format.raw/*20.57*/("""">预约管理</a>
 	</p>
 	<p>
 		<a href="#" target="salon_main">评论管理</a>
@@ -214,7 +212,7 @@ Seq[Any](format.raw/*1.19*/("""
 	</div>
 	</div>
 </div>
-""")))})),format.raw/*195.2*/("""
+""")))})),format.raw/*193.2*/("""
 """))}
     }
     
@@ -227,11 +225,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 10:34:29 CST 2014
+                    DATE: Fri Feb 21 14:29:36 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/designer/designerview.scala.html
-                    HASH: 737176273b0e3c93bf5178ab3480cd5f24baeaaa
-                    MATRIX: 572->1|736->18|764->74|801->77|824->92|862->93|1096->291|1116->302|1176->340|1254->382|1274->393|1334->431|1407->468|1427->479|1489->519|1568->562|1588->573|1643->606|5378->4309
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|36->14|36->14|36->14|39->17|39->17|39->17|41->19|41->19|41->19|44->22|44->22|44->22|217->195
+                    HASH: 3dedc4ce84f5948727e11cd31ceb041c99da855a
+                    MATRIX: 572->1|736->18|764->74|801->77|824->92|862->93|1096->291|1116->302|1176->340|1254->382|1274->393|1334->431|1413->474|1433->485|1488->518|5223->4221
+                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|36->14|36->14|36->14|39->17|39->17|39->17|42->20|42->20|42->20|215->193
                     -- GENERATED --
                 */
             

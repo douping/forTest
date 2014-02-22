@@ -1,6 +1,6 @@
 // @SOURCE:E:/PD/playtest/forTest/conf/routes
-// @HASH:aa2fe0ed5d50c0c91b5d3e5d3ae7d6a3db442d5a
-// @DATE:Thu Feb 20 18:57:58 CST 2014
+// @HASH:7b219d1a6d517ea4d12dd4c4512abc26c0cf0433
+// @DATE:Fri Feb 21 18:40:55 CST 2014
 
 
 import play.core._
@@ -72,22 +72,34 @@ private[this] lazy val controllers_designer_Designer_designersearch9 = Route("GE
 private[this] lazy val controllers_designer_Designer_designerview10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("designerview"))))
         
 
-// @LINE:31
-private[this] lazy val controllers_record_Records_recordmain11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("recordmain"))))
+// @LINE:30
+private[this] lazy val controllers_designer_Designer_designerTask11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("designerTask"))))
         
 
 // @LINE:33
-private[this] lazy val controllers_record_Records_recordview12 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("recordview"))))
+private[this] lazy val controllers_record_Records_recordmain12 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("recordmain"))))
         
 
 // @LINE:35
-private[this] lazy val controllers_record_Records_createrecord13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createrecord"))))
+private[this] lazy val controllers_record_Records_recordview13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("recordview"))))
         
 
 // @LINE:37
-private[this] lazy val controllers_record_Records_toCreateRecords14 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("toCreateRecords"))))
+private[this] lazy val controllers_record_Records_createrecord14 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createrecord"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.User.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tologin""","""controllers.User.tologin"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """loginSuccess""","""controllers.User.loginSuccess"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.User.register"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """toregister""","""controllers.User.toregister"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """checkNameisexit/$name<[^/]+>""","""controllers.User.checkNameisexit(name:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designermain""","""controllers.designer.Designer.designermain"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designersearch""","""controllers.designer.Designer.designersearch"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designerview""","""controllers.designer.Designer.designerview"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """recordmain""","""controllers.record.Records.recordmain"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """recordview""","""controllers.record.Records.recordview"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createrecord""","""controllers.record.Records.createrecord"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """toCreateRecords""","""controllers.record.Records.toCreateRecords""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:39
+private[this] lazy val controllers_record_Records_toCreateRecords15 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("toCreateRecords"))))
+        
+
+// @LINE:41
+private[this] lazy val controllers_record_Records_addRecord16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("addRecord"))))
+        
+
+// @LINE:43
+private[this] lazy val controllers_record_Records_selectDesignerRecord17 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("selectDesignerRecord"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.User.login"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """tologin""","""controllers.User.tologin"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """loginSuccess""","""controllers.User.loginSuccess"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """register""","""controllers.User.register"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """toregister""","""controllers.User.toregister"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """checkNameisexit/$name<[^/]+>""","""controllers.User.checkNameisexit(name:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designermain""","""controllers.designer.Designer.designermain"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designersearch""","""controllers.designer.Designer.designersearch"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designerview""","""controllers.designer.Designer.designerview"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """designerTask""","""controllers.designer.Designer.designerTask"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """recordmain""","""controllers.record.Records.recordmain"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """recordview""","""controllers.record.Records.recordview"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createrecord""","""controllers.record.Records.createrecord"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """toCreateRecords""","""controllers.record.Records.toCreateRecords"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """addRecord""","""controllers.record.Records.addRecord"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """selectDesignerRecord""","""controllers.record.Records.selectDesignerRecord""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -183,34 +195,58 @@ case controllers_designer_Designer_designerview10(params) => {
 }
         
 
-// @LINE:31
-case controllers_record_Records_recordmain11(params) => {
+// @LINE:30
+case controllers_designer_Designer_designerTask11(params) => {
+   call { 
+        invokeHandler(controllers.designer.Designer.designerTask, HandlerDef(this, "controllers.designer.Designer", "designerTask", Nil,"GET", """""", Routes.prefix + """designerTask"""))
+   }
+}
+        
+
+// @LINE:33
+case controllers_record_Records_recordmain12(params) => {
    call { 
         invokeHandler(controllers.record.Records.recordmain, HandlerDef(this, "controllers.record.Records", "recordmain", Nil,"GET", """record managment""", Routes.prefix + """recordmain"""))
    }
 }
         
 
-// @LINE:33
-case controllers_record_Records_recordview12(params) => {
+// @LINE:35
+case controllers_record_Records_recordview13(params) => {
    call { 
         invokeHandler(controllers.record.Records.recordview, HandlerDef(this, "controllers.record.Records", "recordview", Nil,"GET", """""", Routes.prefix + """recordview"""))
    }
 }
         
 
-// @LINE:35
-case controllers_record_Records_createrecord13(params) => {
+// @LINE:37
+case controllers_record_Records_createrecord14(params) => {
    call { 
         invokeHandler(controllers.record.Records.createrecord, HandlerDef(this, "controllers.record.Records", "createrecord", Nil,"GET", """""", Routes.prefix + """createrecord"""))
    }
 }
         
 
-// @LINE:37
-case controllers_record_Records_toCreateRecords14(params) => {
+// @LINE:39
+case controllers_record_Records_toCreateRecords15(params) => {
    call { 
         invokeHandler(controllers.record.Records.toCreateRecords, HandlerDef(this, "controllers.record.Records", "toCreateRecords", Nil,"POST", """""", Routes.prefix + """toCreateRecords"""))
+   }
+}
+        
+
+// @LINE:41
+case controllers_record_Records_addRecord16(params) => {
+   call { 
+        invokeHandler(controllers.record.Records.addRecord, HandlerDef(this, "controllers.record.Records", "addRecord", Nil,"GET", """""", Routes.prefix + """addRecord"""))
+   }
+}
+        
+
+// @LINE:43
+case controllers_record_Records_selectDesignerRecord17(params) => {
+   call { 
+        invokeHandler(controllers.record.Records.selectDesignerRecord, HandlerDef(this, "controllers.record.Records", "selectDesignerRecord", Nil,"GET", """""", Routes.prefix + """selectDesignerRecord"""))
    }
 }
         

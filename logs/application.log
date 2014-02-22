@@ -1,15 +1,129 @@
-2014-02-21 08:37:48,113 - [INFO] - from play in pool-4-thread-1 
+2014-02-21 14:23:36,056 - [INFO] - from play in pool-4-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-02-21 08:38:19,818 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-21 14:24:37,558 - [INFO] - from play in play-internal-execution-context-1 
 mongodb [default] connected at 127.0.0.1:27017/test
 
-2014-02-21 08:38:19,826 - [INFO] - from play in play-internal-execution-context-1 
+2014-02-21 14:24:37,564 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-02-21 08:41:01,834 - [INFO] - from play in play-internal-execution-context-2 
+2014-02-21 14:29:44,056 - [INFO] - from play in play-internal-execution-context-1 
 mongodb [default] connected at 127.0.0.1:27017/test
 
-2014-02-21 08:41:01,834 - [INFO] - from play in play-internal-execution-context-2 
+2014-02-21 14:29:44,056 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-21 14:43:57,594 - [ERROR] - from application in New I/O worker #8 
+
+
+! @6hb59g40f - Internal server error, for (GET) [/recordmain?serviceDesigner=] ->
+
+play.PlayExceptions$CompilationException: Compilation error[object controllers.designer.routes is not a value]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-02-21 14:44:13,082 - [INFO] - from play in play-internal-execution-context-1 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 14:44:13,082 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-21 14:45:11,771 - [INFO] - from play in play-internal-execution-context-1 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 14:45:11,772 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-21 14:59:49,290 - [INFO] - from play in play-internal-execution-context-1 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 14:59:49,291 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-21 15:02:11,219 - [INFO] - from play in play-internal-execution-context-1 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 15:02:11,220 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-02-21 18:40:58,669 - [ERROR] - from application in New I/O worker #4 
+
+
+! @6hb6ej73a - Internal server error, for (GET) [/designerTask] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value selectDesignerRecord is not a member of controllers.designer.ReverseDesigner]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-02-21 18:41:49,096 - [ERROR] - from application in New I/O worker #4 
+
+
+! @6hb6em3in - Internal server error, for (GET) [/designerTask] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value record is not a member of object controllers.designer.routes]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14$$anonfun$apply$16.apply(PlayReloader.scala:304) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:304) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2$$anonfun$apply$14.apply(PlayReloader.scala:298) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:298) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:296) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:296) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:104) ~[play_2.10.jar:2.2.1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:102) ~[play_2.10.jar:2.2.1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library.jar:na]
+
+2014-02-21 18:42:56,150 - [INFO] - from play in play-internal-execution-context-9 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 18:42:56,150 - [INFO] - from play in play-internal-execution-context-9 
+Application started (Dev)
+
+2014-02-21 18:44:36,595 - [INFO] - from play in play-internal-execution-context-9 
+mongodb [default] connected at 127.0.0.1:27017/test
+
+2014-02-21 18:44:36,595 - [INFO] - from play in play-internal-execution-context-9 
 Application started (Dev)
 

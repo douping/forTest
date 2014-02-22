@@ -27,6 +27,8 @@ GET		/designersearch				controllers.designer.Designer.designersearch
 
 GET		/designerview				controllers.designer.Designer.designerview
 
+GET     /designerTask				controllers.designer.Designer.designerTask
+
 #record managment
 GET 	/recordmain					controllers.record.Records.recordmain 
 
@@ -35,5 +37,10 @@ GET 	/recordview					controllers.record.Records.recordview
 GET		/createrecord				controllers.record.Records.createrecord
 
 POST	/toCreateRecords			controllers.record.Records.toCreateRecords
+
+GET		/addRecord					controllers.record.Records.addRecord
+
+GET		/selectDesignerRecord		controllers.record.Records.selectDesignerRecord
+
 
 

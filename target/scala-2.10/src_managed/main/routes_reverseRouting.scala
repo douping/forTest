@@ -1,6 +1,6 @@
 // @SOURCE:E:/PD/playtest/forTest/conf/routes
-// @HASH:aa2fe0ed5d50c0c91b5d3e5d3ae7d6a3db442d5a
-// @DATE:Thu Feb 20 18:57:58 CST 2014
+// @HASH:7b219d1a6d517ea4d12dd4c4512abc26c0cf0433
+// @DATE:Fri Feb 21 18:40:55 CST 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -99,11 +99,13 @@ def index(): Call = {
 }
                   
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
 package controllers.designer {
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
@@ -122,6 +124,12 @@ def designermain(): Call = {
 }
                                                 
 
+// @LINE:30
+def designerTask(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "designerTask")
+}
+                                                
+
 // @LINE:26
 def designersearch(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "designersearch")
@@ -133,38 +141,54 @@ def designersearch(): Call = {
 }
                   
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 package controllers.record {
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 class ReverseRecords {
     
 
-// @LINE:33
-def recordview(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "recordview")
-}
-                                                
-
-// @LINE:31
-def recordmain(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "recordmain")
-}
-                                                
-
-// @LINE:37
+// @LINE:39
 def toCreateRecords(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "toCreateRecords")
 }
                                                 
 
 // @LINE:35
+def recordview(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "recordview")
+}
+                                                
+
+// @LINE:41
+def addRecord(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "addRecord")
+}
+                                                
+
+// @LINE:33
+def recordmain(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "recordmain")
+}
+                                                
+
+// @LINE:43
+def selectDesignerRecord(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "selectDesignerRecord")
+}
+                                                
+
+// @LINE:37
 def createrecord(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "createrecord")
 }
@@ -302,11 +326,13 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
 package controllers.designer.javascript {
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
@@ -335,6 +361,17 @@ def designermain : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:30
+def designerTask : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.designer.Designer.designerTask",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "designerTask"})
+      }
+   """
+)
+                        
+
 // @LINE:26
 def designersearch : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.designer.Designer.designersearch",
@@ -351,42 +388,24 @@ def designersearch : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 package controllers.record.javascript {
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 class ReverseRecords {
     
 
-// @LINE:33
-def recordview : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.record.Records.recordview",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordview"})
-      }
-   """
-)
-                        
-
-// @LINE:31
-def recordmain : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.record.Records.recordmain",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordmain"})
-      }
-   """
-)
-                        
-
-// @LINE:37
+// @LINE:39
 def toCreateRecords : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.record.Records.toCreateRecords",
    """
@@ -398,6 +417,50 @@ def toCreateRecords : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:35
+def recordview : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.recordview",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordview"})
+      }
+   """
+)
+                        
+
+// @LINE:41
+def addRecord : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.addRecord",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addRecord"})
+      }
+   """
+)
+                        
+
+// @LINE:33
+def recordmain : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.recordmain",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordmain"})
+      }
+   """
+)
+                        
+
+// @LINE:43
+def selectDesignerRecord : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.selectDesignerRecord",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "selectDesignerRecord"})
+      }
+   """
+)
+                        
+
+// @LINE:37
 def createrecord : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.record.Records.createrecord",
    """
@@ -501,12 +564,14 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
 package controllers.designer.ref {
 
 
+// @LINE:30
 // @LINE:28
 // @LINE:26
 // @LINE:24
@@ -525,6 +590,12 @@ def designermain(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:30
+def designerTask(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.designer.Designer.designerTask(), HandlerDef(this, "controllers.designer.Designer", "designerTask", Seq(), "GET", """""", _prefix + """designerTask""")
+)
+                      
+
 // @LINE:26
 def designersearch(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.designer.Designer.designersearch(), HandlerDef(this, "controllers.designer.Designer", "designersearch", Seq(), "GET", """""", _prefix + """designersearch""")
@@ -536,39 +607,55 @@ def designersearch(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 package controllers.record.ref {
 
 
+// @LINE:43
+// @LINE:41
+// @LINE:39
 // @LINE:37
 // @LINE:35
 // @LINE:33
-// @LINE:31
 class ReverseRecords {
     
 
-// @LINE:33
-def recordview(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.record.Records.recordview(), HandlerDef(this, "controllers.record.Records", "recordview", Seq(), "GET", """""", _prefix + """recordview""")
-)
-                      
-
-// @LINE:31
-def recordmain(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.record.Records.recordmain(), HandlerDef(this, "controllers.record.Records", "recordmain", Seq(), "GET", """record managment""", _prefix + """recordmain""")
-)
-                      
-
-// @LINE:37
+// @LINE:39
 def toCreateRecords(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.record.Records.toCreateRecords(), HandlerDef(this, "controllers.record.Records", "toCreateRecords", Seq(), "POST", """""", _prefix + """toCreateRecords""")
 )
                       
 
 // @LINE:35
+def recordview(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.recordview(), HandlerDef(this, "controllers.record.Records", "recordview", Seq(), "GET", """""", _prefix + """recordview""")
+)
+                      
+
+// @LINE:41
+def addRecord(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.addRecord(), HandlerDef(this, "controllers.record.Records", "addRecord", Seq(), "GET", """""", _prefix + """addRecord""")
+)
+                      
+
+// @LINE:33
+def recordmain(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.recordmain(), HandlerDef(this, "controllers.record.Records", "recordmain", Seq(), "GET", """record managment""", _prefix + """recordmain""")
+)
+                      
+
+// @LINE:43
+def selectDesignerRecord(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.selectDesignerRecord(), HandlerDef(this, "controllers.record.Records", "selectDesignerRecord", Seq(), "GET", """""", _prefix + """selectDesignerRecord""")
+)
+                      
+
+// @LINE:37
 def createrecord(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.record.Records.createrecord(), HandlerDef(this, "controllers.record.Records", "createrecord", Seq(), "GET", """""", _prefix + """createrecord""")
 )

@@ -15,4 +15,7 @@ object Designer extends Controller {
 	def designerview = Action{
 		Ok(views.html.designer.designerview("hello"))
 	}
+	def designerTask = Action {
+	  Ok(views.html.designer.designerTask("hello"))
+	}
 }

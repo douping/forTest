@@ -57,6 +57,11 @@ object Records extends Controller{
 	       Redirect(controllers.record.routes.Records.recordmain)
 	    }
 	)
-	  
+	}
+	def addRecord = Action {
+	    Ok(views.html.record.addRecord(""))
+	  }  
+	def selectDesignerRecord = Action {
+	  Ok(views.html.record.selectDesignerRecord(""))
 	}
 }

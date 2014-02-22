@@ -9,6 +9,7 @@
 			<p>预约管理</p>
 				<ul>
 					<li><a href="@controllers.record.routes.Records.recordmain">预约查看</a></li>
+					<li><a href="@controllers.record.routes.Records.selectDesignerRecord">技师日程查看</a></li>
 				</ul>
 			<p><a href = "#" target = "salon_main">评论管理</a></p>
 			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
@@ -32,7 +33,7 @@
            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             
-            <input type="button" value="添加预约">
+            <a href="@controllers.record.routes.Records.addRecord">添加预约</a>
         </div>
 		<table border="1px solid black" cellspacing="0" cellpadding="0">
 			<thead>
