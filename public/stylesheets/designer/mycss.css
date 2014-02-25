@@ -25,3 +25,12 @@ a{
 	width:600px;
 	height:600px;	
 }
+.row1{
+			background-color:#FFE7BA;
+		}
+.row2{
+			background-color:#FFF0F5;
+}
+#recordmain thead{
+	background-color:gray;
+}

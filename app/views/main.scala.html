@@ -6,6 +6,7 @@
     <head>
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/designer/mycss.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/record.css")">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
@@ -73,6 +74,18 @@
 						return;
 					}
 					$("#phoneMsg").text("号码有效").removeClass("errorMsg").addClass("trueMsg");
+				});
+				
+				$().ready(function(){
+					var $obj=$('#recordmain #service-status');
+					$obj.each(function(i){
+						var status=$(this).text().trim();
+						if(status=="预约中"){
+							$(this).parent().addClass("row1");
+						}else{
+							$(this).parent().addClass('row2');
+						}
+					});
 				});
 			})
 			var timer = null;

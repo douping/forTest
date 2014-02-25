@@ -3,19 +3,7 @@
 @import helper.twitterBootstrap._
 @main("s"){
 	<div class="content-link">
-			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
-			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
-			<p><a href="@controllers.designer.routes.Designer.designermain">技师管理</a></p>
-			<p>预约管理</p>
-				<ul>
-					<li><a href="@controllers.record.routes.Records.recordmain">预约查看</a></li>
-					<li><a href="@controllers.record.routes.Records.selectDesignerRecord">技师日程查看</a></li>
-				</ul>
-			<p><a href = "#" target = "salon_main">评论管理</a></p>
-			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
-			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
-			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
-			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
+			@views.html.record.recordMenu()
 	</div>	
 	<div class="content-core">
 		<p>总计<span>@count</span>个预约</p>
@@ -35,7 +23,7 @@
             
             <a href="@controllers.record.routes.Records.addRecord">添加预约</a>
         </div>
-		<table border="1px solid black" cellspacing="0" cellpadding="0">
+		<table id="recordmain" border="1px solid black" cellspacing="0" cellpadding="0">
 			<thead>
 				<tr>
 					<td>预约号</td>
@@ -44,7 +32,7 @@
 					<td>服务项目</td>
 					<td>预约会员名</td>
 					<td>会员联系</td>
-					<td>指定设计师</td>
+					<td>指定技师</td>
 					<td>状态</td>
 					<td>总计收费</td>
 					<td>操作</td>
@@ -54,14 +42,14 @@
 				@records.map{re=>
 				<tr>
 					<td><a href="@controllers.record.routes.Records.recordview">@re.id</a></td>                        
-					<td>@re.serviceStart</td>
-					<td>@re.serviceEnd</td>
+					<td>@re.serviceStart.format("yyyy-MM-dd hh:mm")</td>
+					<td>@re.serviceEnd.format("yyyy-MM-dd hh:mm")</td>
 					<td>@re.serviceItem</td>
 					<td>@re.userName</td>
 					<td>@re.userPhone</td>
 					<td>@re.serviceDesigner</td>
 					
-						<td>
+						<td id="service-status">
 						@if(re.serviceStatus==1){
 						已过期
 						}
@@ -74,7 +62,7 @@
 					</td>
 					<td>@re.costTotal</td>
 					<td>
-					<input type="button" onclick='window.location.href="#";' value="取消预约"/>&nbsp;
+					<a href="#">取消</a>&nbsp;<a href="#">过期</a>&nbsp;<a href="#">已完成</a>
 					
 					</td>
 				</tr>

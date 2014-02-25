@@ -4,26 +4,26 @@
 
 @main(""){
 	<div class="loginForm">
-		<h2>µÇÂ¼</h2>
-		<a href="#" id="nameLogin" >ÓÃ»§ÃûµÇÂ½</a>
-		<a href="#" id="emailLogin">ÓÊÏäµÇÂ¼</a>
+		<h2>ç™»å½•</h2>
+		<a href="#" id="nameLogin" >æ™®é€šç”¨æˆ·ç™»å½•</a>
+		<a href="#" id="emailLogin">é‚®ç®±ç™»å½•</a>
 		@form(routes.User.tologin){
 			<table>
 			<tr>
-				<td><label id="usernameinf">ÓÃ»§Ãû</label></td>
+				<td><label id="usernameinf">ç”¨æˆ·å</label></td>
 				<td><input class="base-input" id="name" name="name"></td>
 			</tr>
 			<tr>
-				<td><label>ÓÊÏä</label></td>
+				<td><label>å¯†ç </label></td>
 				<td><input type="password" class="base-input" name="password"></td>
 			</tr>
 			<tr>
-	            <td><label>ÑéÖ¤Âë</label></td>        
+	            <td><label>éªŒè¯ç </label></td>        
 	            <td class="width70"><input name="imageCode" type="text" class="imagecode" /></td>
 	        </tr>
 			<tr>
-				<td colspan="2"><input type="submit" class="submit" value="Ìá½»">
-					&nbsp;&nbsp;<a href="@routes.User.register">×¢²á</a>
+				<td colspan="2"><input type="submit" class="submit" value="ç™»å½•">
+					&nbsp;&nbsp;<a href="@routes.User.register">æ³¨å†Œ</a>
 				</td>
 			</tr>
 		</table>

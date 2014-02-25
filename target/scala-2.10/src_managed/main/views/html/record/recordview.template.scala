@@ -25,61 +25,51 @@ import helper.twitterBootstrap._
 Seq[Any](format.raw/*1.19*/("""
 """),_display_(Seq[Any](/*4.2*/main("message")/*4.17*/{_display_(Seq[Any](format.raw/*4.18*/("""
 	<div class="content-link">
-			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
-			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
-			<p><a href=""""),_display_(Seq[Any](/*8.17*/controllers/*8.28*/.designer.routes.Designer.designermain)),format.raw/*8.66*/("""">技师管理</a></p>
-			<p>预约管理</p>
-				<ul>
-					<li><a href=""""),_display_(Seq[Any](/*11.20*/controllers/*11.31*/.record.routes.Records.recordmain)),format.raw/*11.64*/("""">预约查看</a></li>
-				</ul>
-			<p><a href = "#" target = "salon_main">评论管理</a></p>
-			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
-			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
-			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
-			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
+			"""),_display_(Seq[Any](/*6.5*/views/*6.10*/.html.record.recordMenu())),format.raw/*6.35*/("""	
 	</div>	
 	<div class="content-core">
 		<h2>预约详情</h2>
 		<table border="1px solid black" cellspacing="0" cellpadding="0" class="recordview-table">
 			<tr>
-				<td width="100px">顾客留言</td>
-				<td colspan="3" width="600px"></td>
+				<td>预约编号</td>
+				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<td>预约编号</td>
+				<td>顾客留言</td>
 				<td colspan="3"></td>
 				
 			</tr>
 			<tr>
-				<td>来店时间</td>
+				<td>预计到店时间</td>
 				<td colspan="3"></td>
 			</tr>
 			<tr>
-				<td>服务所需时间</td>
-				<td></td>
-				<td>指定技师</td>
-				<td></td>
+				<td width="100px">预计结束时间</td>
+				<td width="150px"></td>
+				<td width="100px">指定技师</td>
+				<td width="150px"></td>
 			</tr>
 			<tr>
 				<td>服务项目</td>
-				<td></td>
+				<td colspan="3"></td>
 			</tr>
 			
 			<tr>
+				<td>是否用优惠劵</td>
+				<td></td>
 				<td>优惠劵使用情</td>
-				<td colspan="2"></td>
-				<td>所剩点卷</td>
+				<td></td>
 			</tr>
 			<tr>
 				<td>联系会员</td>
-				<td colspan="2"></td>
+				<td colspan="3"></td>
 			</tr>
 			<tr>
 				<td>合计金额</td>
-				<td colspan="2"></td>
+				<td colspan="3"></td>
 			</tr>
 		</table>
-		<input type="button" value="返回预约履历" onclick="window.location.href='"""),_display_(Seq[Any](/*60.71*/controllers/*60.82*/.record.routes.Records.recordmain)),format.raw/*60.115*/("""';"/>
+		<input type="button" value="返回预约履历" onclick="window.location.href='"""),_display_(Seq[Any](/*50.71*/controllers/*50.82*/.record.routes.Records.recordmain)),format.raw/*50.115*/("""';"/>
 		<input type="button" value="取消预约">
 	</div>
 """)))})))}
@@ -94,11 +84,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 13:36:38 CST 2014
+                    DATE: Tue Feb 25 10:29:06 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/recordview.scala.html
-                    HASH: 5148cb43840f8f27650031f1a1007109735975cd
-                    MATRIX: 568->1|731->18|768->74|791->89|829->90|1059->285|1078->296|1137->334|1234->395|1254->406|1309->439|2514->1608|2534->1619|2590->1652
-                    LINES: 19->1|25->1|26->4|26->4|26->4|30->8|30->8|30->8|33->11|33->11|33->11|82->60|82->60|82->60
+                    HASH: 5d75205cd568fc3c652ed2c01913386fbac679d0
+                    MATRIX: 568->1|731->18|768->74|791->89|829->90|898->125|911->130|957->155|1866->1028|1886->1039|1942->1072
+                    LINES: 19->1|25->1|26->4|26->4|26->4|28->6|28->6|28->6|72->50|72->50|72->50
                     -- GENERATED --
                 */
             

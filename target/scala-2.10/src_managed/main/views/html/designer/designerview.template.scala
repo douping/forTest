@@ -26,36 +26,7 @@ Seq[Any](format.raw/*1.19*/("""
 """),format.raw/*4.1*/("""
 """),_display_(Seq[Any](/*5.2*/main("message")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 <div class="content-link">
-	<p>
-		<a href="my_salon.html" target="salon_main">我的店铺</a>
-	</p>
-	<p>
-		<a href="basic_info_control.html" target="salon_main">基本信息管理</a>
-	</p>
-	<p>
-		<a href=""""),_display_(Seq[Any](/*14.13*/controllers/*14.24*/.designer.routes.Designer.designermain)),format.raw/*14.62*/("""">技师管理</a>
-	</p>
-	<ul>
-		<li><a href=""""),_display_(Seq[Any](/*17.17*/controllers/*17.28*/.designer.routes.Designer.designermain)),format.raw/*17.66*/("""">我的技师</a></li>
-	</ul>
-	<p>
-		<a href=""""),_display_(Seq[Any](/*20.13*/controllers/*20.24*/.record.routes.Records.recordmain)),format.raw/*20.57*/("""">预约管理</a>
-	</p>
-	<p>
-		<a href="#" target="salon_main">评论管理</a>
-	</p>
-	<p>
-		<a href="service_control.html" target="salon_main">服务管理</a>
-	</p>
-	<p>
-		<a href="#" target="salon_main">优惠劵管理</a>
-	</p>
-	<p>
-		<a href="trend_control.html" target="salon_main">动态管理</a>
-	</p>
-	<p>
-		<a href="#" target="salon_main">店铺装修</a>
-	</p>
+	"""),_display_(Seq[Any](/*7.3*/views/*7.8*/.html.record.recordMenu())),format.raw/*7.33*/("""
 </div>
 <div class="content-core">
 	<div class="designerview-main">
@@ -212,7 +183,7 @@ Seq[Any](format.raw/*1.19*/("""
 	</div>
 	</div>
 </div>
-""")))})),format.raw/*193.2*/("""
+""")))})),format.raw/*164.2*/("""
 """))}
     }
     
@@ -225,11 +196,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Feb 21 14:29:36 CST 2014
+                    DATE: Tue Feb 25 10:41:28 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/designer/designerview.scala.html
-                    HASH: 3dedc4ce84f5948727e11cd31ceb041c99da855a
-                    MATRIX: 572->1|736->18|764->74|801->77|824->92|862->93|1096->291|1116->302|1176->340|1254->382|1274->393|1334->431|1413->474|1433->485|1488->518|5223->4221
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|36->14|36->14|36->14|39->17|39->17|39->17|42->20|42->20|42->20|215->193
+                    HASH: 640c8a7907042a140e419edf021654b37d9a8151
+                    MATRIX: 572->1|736->18|764->74|801->77|824->92|862->93|928->125|940->130|986->155|4382->3519
+                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|29->7|29->7|29->7|186->164
                     -- GENERATED --
                 */
             

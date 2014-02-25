@@ -26,19 +26,7 @@ Seq[Any](format.raw/*1.19*/("""
 
 """),_display_(Seq[Any](/*5.2*/main("s")/*5.11*/{_display_(Seq[Any](format.raw/*5.12*/("""
 	<div class="content-link">
-			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
-			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
-			<p><a href=""""),_display_(Seq[Any](/*9.17*/controllers/*9.28*/.designer.routes.Designer.designermain)),format.raw/*9.66*/("""">技师管理</a></p>
-			<p>预约管理</p>
-				<ul>
-					<li><a href=""""),_display_(Seq[Any](/*12.20*/controllers/*12.31*/.record.routes.Records.recordmain)),format.raw/*12.64*/("""">预约查看</a></li>
-					<li>技师日程查看</li>
-				</ul>
-			<p><a href = "#" target = "salon_main">评论管理</a></p>
-			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
-			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
-			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
-			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
+			"""),_display_(Seq[Any](/*7.5*/views/*7.10*/.html.record.recordMenu())),format.raw/*7.35*/("""	
 	</div>
 	<div class="content-core">
 		<div>
@@ -47,7 +35,7 @@ Seq[Any](format.raw/*1.19*/("""
 				<div style="float:left;">
 					<p>選択中のスタイリスト</p>
 					<p>坂本 隆文</span>　の予約可能日程</p>
-					<p><a href=""""),_display_(Seq[Any](/*28.19*/controllers/*28.30*/.record.routes.Records.selectDesignerRecord)),format.raw/*28.73*/("""">其它技师日程查看</a></p>
+					<p><a href=""""),_display_(Seq[Any](/*16.19*/controllers/*16.30*/.record.routes.Records.selectDesignerRecord)),format.raw/*16.73*/("""">其它技师日程查看</a></p>
 				</div>
 			</div>
 	</div>
@@ -140,7 +128,7 @@ Seq[Any](format.raw/*1.19*/("""
 				</th>
 				<th colspan="12">
 					<table cellpadding="0" cellspacing="0" width="100%" height="1080px" class="designerTask">
-					"""),_display_(Seq[Any](/*121.7*/for(i <- 0 until 21) yield /*121.27*/{_display_(Seq[Any](format.raw/*121.28*/("""
+					"""),_display_(Seq[Any](/*109.7*/for(i <- 0 until 21) yield /*109.27*/{_display_(Seq[Any](format.raw/*109.28*/("""
 						<tr>
 							<th><a href="#"><span>×</span></a></th>
 							<th><a href="#"><span>×</span></a></th>
@@ -155,7 +143,7 @@ Seq[Any](format.raw/*1.19*/("""
 							<th><a href="#"><span>◎</span></a></th>
 							<th><a href="#"><span>×</span></a></th>
 						</tr>
-						""")))})),format.raw/*136.8*/("""
+						""")))})),format.raw/*124.8*/("""
 					</table>
 				</th>
 				<th>
@@ -240,11 +228,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Feb 21 18:44:35 CST 2014
+                    DATE: Tue Feb 25 10:35:35 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/designer/designerTask.scala.html
-                    HASH: e30ea8014c917fceed43c3d6db92aecfeb8fa9bf
-                    MATRIX: 572->1|735->18|774->76|791->85|829->86|1059->281|1078->292|1137->330|1234->391|1254->402|1309->435|2024->1114|2044->1125|2109->1168|4332->3355|4369->3375|4409->3376|5051->3986
-                    LINES: 19->1|25->1|27->5|27->5|27->5|31->9|31->9|31->9|34->12|34->12|34->12|50->28|50->28|50->28|143->121|143->121|143->121|158->136
+                    HASH: 99212c698b96bad43caa0663d1625bac20a2eea2
+                    MATRIX: 572->1|735->18|774->76|791->85|829->86|898->121|911->126|957->151|1307->465|1327->476|1392->519|3615->2706|3652->2726|3692->2727|4334->3337
+                    LINES: 19->1|25->1|27->5|27->5|27->5|29->7|29->7|29->7|38->16|38->16|38->16|131->109|131->109|131->109|146->124
                     -- GENERATED --
                 */
             

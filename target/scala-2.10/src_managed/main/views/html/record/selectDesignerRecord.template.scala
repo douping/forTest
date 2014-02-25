@@ -26,56 +26,44 @@ Seq[Any](format.raw/*1.19*/("""
 """),format.raw/*4.1*/("""
 """),_display_(Seq[Any](/*5.2*/main("message")/*5.17*/{_display_(Seq[Any](format.raw/*5.18*/("""
 		<div class="content-link">
-			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
-			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
-			<p><a href=""""),_display_(Seq[Any](/*9.17*/controllers/*9.28*/.designer.routes.Designer.designermain)),format.raw/*9.66*/("""">技师管理</a></p>
-			<p><a href=""""),_display_(Seq[Any](/*10.17*/controllers/*10.28*/.record.routes.Records.recordmain)),format.raw/*10.61*/("""">预约管理</a></p>
-			<ul>
-					<li><a href=""""),_display_(Seq[Any](/*12.20*/controllers/*12.31*/.record.routes.Records.recordmain)),format.raw/*12.64*/("""">预约查看</a></li>
-					<li>技师日程查看</li>
-				</ul>
-			<p><a href = "#" target = "salon_main">评论管理</a></p>
-			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
-			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
-			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
-			<p><a href = "#" target = "salon_main">店铺装修</a></p>
+			"""),_display_(Seq[Any](/*7.5*/views/*7.10*/.html.record.recordMenu())),format.raw/*7.35*/("""
 		</div>
 		<div class="content-core">
-			<h1>预约查看</h1>
-			技师ID<input name="designerId"/>&nbsp;&nbsp;&nbsp;<input type="button" value="添加技师">
+			<h1>技师日程查看</h1>
+			技师ID<input name="designerId"/>&nbsp;&nbsp;&nbsp;<input type="button" value="搜索" />
 			<table cellspacing="0" cellpadding="0">
 				<tr>
 					<td>
 						<div>
 							<div>
-								<a href=""""),_display_(Seq[Any](/*29.19*/controllers/*29.30*/.designer.routes.Designer.designerTask)),format.raw/*29.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
+								<a href=""""),_display_(Seq[Any](/*17.19*/controllers/*17.30*/.designer.routes.Designer.designerTask)),format.raw/*17.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
 							</div>
 							<p><a href="#">島崎 修</a></p>
 							<div ><span>代表</span>（歴8年）</div>
 							<div>10年後20年後も綺麗でいてもらうために☆</div>
-							<p><input type="button" value="解除绑定"></p>
+							<a href=""""),_display_(Seq[Any](/*22.18*/controllers/*22.29*/.designer.routes.Designer.designerTask)),format.raw/*22.67*/(""""><p><input type="button" value="查看日程"></p></a>
 						</div>
 					</td>
 					<td>
 						<div>
 							<div>
-								<a href=""""),_display_(Seq[Any](/*40.19*/controllers/*40.30*/.designer.routes.Designer.designerTask)),format.raw/*40.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
+								<a href=""""),_display_(Seq[Any](/*28.19*/controllers/*28.30*/.designer.routes.Designer.designerTask)),format.raw/*28.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
 							</div>
 							<p><a href="#">島崎 修</a></p>
 							<div ><span>代表</span>（歴8年）</div>
 							<div>10年後20年後も綺麗でいてもらうために☆</div>
-							<p><input type="button" value="解除绑定"></p>
+							<p><input type="button" value="查看日程"></p>
 						</div>
 					</td>
 					<td>
 						<div>
 							<div>
-								<a href=""""),_display_(Seq[Any](/*51.19*/controllers/*51.30*/.designer.routes.Designer.designerTask)),format.raw/*51.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
+								<a href=""""),_display_(Seq[Any](/*39.19*/controllers/*39.30*/.designer.routes.Designer.designerTask)),format.raw/*39.68*/(""""><img src="http://imgbp.hotp.jp/CSP/IMG_SRC/05/32/B002740532/B002740532_164-219.jpg"/></a>
 							</div>
 							<p><a href="#">島崎 修</a></p>
 							<div ><span>代表</span>（歴8年）</div>
 							<div>10年後20年後も綺麗でいてもらうために☆</div>
-							<p><input type="button" value="解除绑定"></p>
+							<p><input type="button" value="查看日程"></p>
 						</div>
 					</td>			
 				</tr>
@@ -96,11 +84,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Feb 21 18:40:55 CST 2014
+                    DATE: Tue Feb 25 10:29:06 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/selectDesignerRecord.scala.html
-                    HASH: 46919d34d42d86ccf342a634d262d6e5827c6502
-                    MATRIX: 578->1|741->18|769->73|806->76|829->91|867->92|1098->288|1117->299|1176->337|1244->369|1264->380|1319->413|1399->457|1419->468|1474->501|2132->1123|2152->1134|2212->1172|2606->1530|2626->1541|2686->1579|3080->1937|3100->1948|3160->1986
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|31->9|31->9|31->9|32->10|32->10|32->10|34->12|34->12|34->12|51->29|51->29|51->29|62->40|62->40|62->40|73->51|73->51|73->51
+                    HASH: 67459270aebf6e74a7e3aa0a031164a753741692
+                    MATRIX: 578->1|741->18|769->73|806->76|829->91|867->92|937->128|950->133|996->158|1291->417|1311->428|1371->466|1650->709|1670->720|1730->758|1897->889|1917->900|1977->938|2371->1296|2391->1307|2451->1345
+                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|29->7|29->7|29->7|39->17|39->17|39->17|44->22|44->22|44->22|50->28|50->28|50->28|61->39|61->39|61->39
                     -- GENERATED --
                 */
             

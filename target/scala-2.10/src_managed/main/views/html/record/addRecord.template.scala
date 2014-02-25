@@ -32,6 +32,7 @@ Seq[Any](format.raw/*1.19*/("""
 			<p>预约管理</p>
 				<ul>
 					<li><a href=""""),_display_(Seq[Any](/*12.20*/controllers/*12.31*/.record.routes.Records.recordmain)),format.raw/*12.64*/("""">预约查看</a></li>
+					<li><a href=""""),_display_(Seq[Any](/*13.20*/controllers/*13.31*/.record.routes.Records.selectDesignerRecord)),format.raw/*13.74*/("""">技师日程查看</a></li>
 				</ul>
 			<p><a href = "#" target = "salon_main">评论管理</a></p>
 			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
@@ -40,7 +41,7 @@ Seq[Any](format.raw/*1.19*/("""
 			<p><a href = "#" target = "salon_main">店铺装修</a></p>	
 	</div>	
 	<div class="content-core">
-	"""),_display_(Seq[Any](/*21.3*/form(controllers.record.routes.Records.recordmain)/*21.53*/{_display_(Seq[Any](format.raw/*21.54*/("""
+	"""),_display_(Seq[Any](/*22.3*/form(controllers.record.routes.Records.recordmain)/*22.53*/{_display_(Seq[Any](format.raw/*22.54*/("""
 		<table cellpadding="0" cellspacing="0" class="addrecord-table">
 			<tr>
 				<td width="105px">预约项目</td>
@@ -101,9 +102,9 @@ Seq[Any](format.raw/*1.19*/("""
 				</td>
 			</tr>
 		</table>
-	""")))})),format.raw/*82.3*/("""	
+	""")))})),format.raw/*83.3*/("""	
 	</div>		
-""")))})),format.raw/*84.2*/("""
+""")))})),format.raw/*85.2*/("""
 """))}
     }
     
@@ -116,11 +117,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Fri Feb 21 14:07:24 CST 2014
+                    DATE: Mon Feb 24 08:32:53 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/addRecord.scala.html
-                    HASH: e9763025257a0612890eb3e66fa8201cc85e83ba
-                    MATRIX: 567->1|730->18|758->73|795->76|818->91|856->92|1086->287|1105->298|1164->336|1261->397|1281->408|1336->441|1758->828|1817->878|1856->879|3376->2368|3422->2383
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|31->9|31->9|31->9|34->12|34->12|34->12|43->21|43->21|43->21|104->82|106->84
+                    HASH: 070d852b6373895ffcb11d6200c389a6e99dd0d8
+                    MATRIX: 567->1|730->18|758->73|795->76|818->91|856->92|1086->287|1105->298|1164->336|1261->397|1281->408|1336->441|1408->477|1428->488|1493->531|1917->920|1976->970|2015->971|3535->2460|3581->2475
+                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|31->9|31->9|31->9|34->12|34->12|34->12|35->13|35->13|35->13|44->22|44->22|44->22|105->83|107->85
                     -- GENERATED --
                 */
             

@@ -26,26 +26,26 @@ Seq[Any](format.raw/*1.37*/("""
 """),format.raw/*4.1*/("""
 """),_display_(Seq[Any](/*5.2*/main("")/*5.10*/{_display_(Seq[Any](format.raw/*5.11*/("""
 	<div class="loginForm">
-		<h2>��¼</h2>
-		<a href="#" id="nameLogin" >�û����½</a>
-		<a href="#" id="emailLogin">�����¼</a>
+		<h2>登录</h2>
+		<a href="#" id="nameLogin" >普通用户登录</a>
+		<a href="#" id="emailLogin">邮箱登录</a>
 		"""),_display_(Seq[Any](/*10.4*/form(routes.User.tologin)/*10.29*/{_display_(Seq[Any](format.raw/*10.30*/("""
 			<table>
 			<tr>
-				<td><label id="usernameinf">�û���</label></td>
+				<td><label id="usernameinf">用户名</label></td>
 				<td><input class="base-input" id="name" name="name"></td>
 			</tr>
 			<tr>
-				<td><label>����</label></td>
+				<td><label>密码</label></td>
 				<td><input type="password" class="base-input" name="password"></td>
 			</tr>
 			<tr>
-	            <td><label>��֤��</label></td>        
+	            <td><label>验证码</label></td>        
 	            <td class="width70"><input name="imageCode" type="text" class="imagecode" /></td>
 	        </tr>
 			<tr>
-				<td colspan="2"><input type="submit" class="submit" value="�ύ">
-					&nbsp;&nbsp;<a href=""""),_display_(Seq[Any](/*26.28*/routes/*26.34*/.User.register)),format.raw/*26.48*/("""">ע��</a>
+				<td colspan="2"><input type="submit" class="submit" value="登录">
+					&nbsp;&nbsp;<a href=""""),_display_(Seq[Any](/*26.28*/routes/*26.34*/.User.register)),format.raw/*26.48*/("""">注册</a>
 				</td>
 			</tr>
 		</table>
@@ -70,10 +70,10 @@ Seq[Any](format.raw/*1.37*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 19:09:56 CST 2014
+                    DATE: Mon Feb 24 16:51:00 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/login.scala.html
-                    HASH: 4ae6613ffad391d80d0dffcda82889090de74194
-                    MATRIX: 584->1|765->36|793->91|830->94|846->102|884->103|1051->235|1085->260|1124->261|1712->813|1727->819|1763->833|1883->922
+                    HASH: 1c7ce84cc502fd2a1464a46bcb5290988a8a0fd7
+                    MATRIX: 584->1|765->36|793->91|830->94|846->102|884->103|1047->231|1081->256|1120->257|1702->803|1717->809|1753->823|1872->911
                     LINES: 19->1|25->1|26->4|27->5|27->5|27->5|32->10|32->10|32->10|48->26|48->26|48->26|55->33
                     -- GENERATED --
                 */
