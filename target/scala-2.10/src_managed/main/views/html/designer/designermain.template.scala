@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object designermain extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[String,play.api.templates.HtmlFormat.Appendable] {
 
@@ -85,11 +86,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 25 10:41:28 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/designer/designermain.scala.html
-                    HASH: 8ca1ecbc1423201197810a114d4497a852d06114
-                    MATRIX: 572->1|735->18|763->73|800->76|823->91|861->92|931->128|944->133|993->161|1270->402|1290->413|1350->451|1744->809|1764->820|1824->858|2218->1216|2238->1227|2298->1265
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|29->7|29->7|29->7|39->17|39->17|39->17|50->28|50->28|50->28|61->39|61->39|61->39
+                    HASH: e7385009c705c9ed9342232e9c436d4ab9977091
+                    MATRIX: 603->1|766->18|794->73|831->76|854->91|892->92|962->128|975->133|1024->161|1301->402|1321->413|1381->451|1775->809|1795->820|1855->858|2249->1216|2269->1227|2329->1265
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|30->7|30->7|30->7|40->17|40->17|40->17|51->28|51->28|51->28|62->39|62->39|62->39
                     -- GENERATED --
                 */
             

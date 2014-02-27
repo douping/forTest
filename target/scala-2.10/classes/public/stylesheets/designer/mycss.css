@@ -31,6 +31,16 @@ a{
 .row2{
 			background-color:#FFF0F5;
 }
+.row3{
+			background-color:#FF9966;
+}
+.row4{
+			background-color:#FFCC00;
+}
 #recordmain thead{
 	background-color:gray;
+}
+.pagelink{
+	font-size:14pt;
+	font-weight:bold;
 }

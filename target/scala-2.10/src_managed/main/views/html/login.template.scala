@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object login extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[scala.Tuple2[String, String]],play.api.templates.HtmlFormat.Appendable] {
 
@@ -70,11 +71,11 @@ Seq[Any](format.raw/*1.37*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Feb 24 16:51:00 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/login.scala.html
-                    HASH: 1c7ce84cc502fd2a1464a46bcb5290988a8a0fd7
-                    MATRIX: 584->1|765->36|793->91|830->94|846->102|884->103|1047->231|1081->256|1120->257|1702->803|1717->809|1753->823|1872->911
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|32->10|32->10|32->10|48->26|48->26|48->26|55->33
+                    HASH: 27fd9f48f7b684643446988abfd81781c9c5b0a7
+                    MATRIX: 615->1|796->36|824->91|861->94|877->102|915->103|1078->231|1112->256|1151->257|1733->803|1748->809|1784->823|1903->911
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|33->10|33->10|33->10|49->26|49->26|49->26|56->33
                     -- GENERATED --
                 */
             

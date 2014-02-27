@@ -1,4 +1,4 @@
-@(records:List[Record],count:Long)
+@(records: List[Record], count: Long, pages: Int, page:Int)
 @import helper._
 @import helper.twitterBootstrap._
 @main("s"){
@@ -7,6 +7,8 @@
 	</div>	
 	<div class="content-core">
 		<p>总计<span>@count</span>个预约</p>
+		<input type="hidden" name="page" id="page" value="@page">
+		<input type="hidden" name="totalPage" id="totalPage" value="@pages">
 		<div>                           
                                          开始日期：<input type="date">&nbsp;&nbsp;
                                         
@@ -41,7 +43,7 @@
 			<tbody>
 				@records.map{re=>
 				<tr>
-					<td><a href="@controllers.record.routes.Records.recordview">@re.id</a></td>                        
+					<td><a href="@controllers.record.routes.Records.recordview(re.id)">@re.id</a></td>                        
 					<td>@re.serviceStart.format("yyyy-MM-dd hh:mm")</td>
 					<td>@re.serviceEnd.format("yyyy-MM-dd hh:mm")</td>
 					<td>@re.serviceItem</td>
@@ -50,24 +52,41 @@
 					<td>@re.serviceDesigner</td>
 					
 						<td id="service-status">
-						@if(re.serviceStatus==1){
+						@if(re.serviceStatus==2){
 						已过期
 						}
-						@if(re.serviceStatus==2){
+						@if(re.serviceStatus==0){
 						预约中	
 						}
-						@if(re.serviceStatus==0){
+						@if(re.serviceStatus==1){
 						已消费
+						}
+						@if(-1 == re.serviceStatus){
+						已取消
 						}
 					</td>
 					<td>@re.costTotal</td>
 					<td>
-					<a href="#">取消</a>&nbsp;<a href="#">过期</a>&nbsp;<a href="#">已完成</a>
+					<a href="@controllers.record.routes.Records.cancelRecord(re.id)">取消</a>&nbsp;
+					<a href="@controllers.record.routes.Records.overdateRecord(re.id)">过期</a>&nbsp;
+					<a href="@controllers.record.routes.Records.finishRecord(re.id)">已完成</a>
 					
 					</td>
 				</tr>
 				}
 			</tbody>
 		</table>
+		<div class="page-limit">
+			<a href="javascript:toUpPage();">上一页</a>
+			@for(i <-1 to pages){
+				@if(page==i){
+					<a href="javascript:toPage(@i);" class="pagelink">@i</a>
+				}else{
+					<a href="javascript:toPage(@i);">@i</a>
+				}
+				
+			}
+			<a href="javascript:toNextPage();">下一页</a>
+		</div>
 	</div>
 }

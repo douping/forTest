@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[String,play.api.templates.HtmlFormat.Appendable] {
 
@@ -38,11 +39,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 17:55:18 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/index.scala.html
-                    HASH: 080fc198deedd12cb8158e301d69b93c2ab76a30
-                    MATRIX: 556->1|667->18|704->21|735->44|774->46|815->53|829->59|867->76|900->79
-                    LINES: 19->1|22->1|24->3|24->3|24->3|26->5|26->5|26->5|28->7
+                    HASH: e7e0609b3ff6b7f897500c31b13d5f99380c2075
+                    MATRIX: 587->1|698->18|735->21|766->44|805->46|846->53|860->59|898->76|931->79
+                    LINES: 20->1|23->1|25->3|25->3|25->3|27->5|27->5|27->5|29->7
                     -- GENERATED --
                 */
             

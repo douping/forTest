@@ -30,9 +30,9 @@ GET		/designerview				controllers.designer.Designer.designerview
 GET     /designerTask				controllers.designer.Designer.designerTask
 
 #record managment
-GET 	/recordmain					controllers.record.Records.recordmain 
+GET 	/recordmain/:page			controllers.record.Records.recordmain(page:Int) 
 
-GET 	/recordview					controllers.record.Records.recordview
+GET 	/recordview/:id				controllers.record.Records.recordview(id: ObjectId)
 
 GET		/createrecord				controllers.record.Records.createrecord
 
@@ -41,6 +41,12 @@ POST	/toCreateRecords			controllers.record.Records.toCreateRecords
 GET		/addRecord					controllers.record.Records.addRecord
 
 GET		/selectDesignerRecord		controllers.record.Records.selectDesignerRecord
+
+GET 	/cancelRecord/:id			controllers.record.Records.cancelRecord(id: ObjectId)
+
+GET 	/overdateRecord/:id			controllers.record.Records.overdateRecord(id: ObjectId)
+
+GET 	/finishRecord/:id			controllers.record.Records.finishRecord(id: ObjectId)
 
 
 

@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object updateUser extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[Users,Form[scala.Tuple7[String, scala.Tuple2[String, String], String, String, String, scala.Tuple2[String, String], String]],play.api.templates.HtmlFormat.Appendable] {
 
@@ -98,11 +99,11 @@ Seq[Any](format.raw/*1.102*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Feb 17 11:25:21 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/updateUser.scala.html
-                    HASH: 691f5ff0d7827ef5f7a3e933e3e98e6949cd4297
-                    MATRIX: 679->1|926->101|954->156|991->159|1017->177|1055->178|1180->268|1217->296|1256->297|1464->469|1477->473|1504->478|1765->703|1779->707|1811->716|2306->1175|2319->1179|2348->1185|2634->1435|2647->1439|2676->1445|3643->2381
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|32->10|32->10|32->10|36->14|36->14|36->14|41->19|41->19|41->19|51->29|51->29|51->29|56->34|56->34|56->34|86->64
+                    HASH: e386e01b8e8f6d832f4d05e37fc0f870b35f16ce
+                    MATRIX: 710->1|957->101|985->156|1022->159|1048->177|1086->178|1211->268|1248->296|1287->297|1495->469|1508->473|1535->478|1796->703|1810->707|1842->716|2337->1175|2350->1179|2379->1185|2665->1435|2678->1439|2707->1445|3674->2381
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|33->10|33->10|33->10|37->14|37->14|37->14|42->19|42->19|42->19|52->29|52->29|52->29|57->34|57->34|57->34|87->64
                     -- GENERATED --
                 */
             

@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object designerNav extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template0[play.api.templates.HtmlFormat.Appendable] {
 
@@ -23,18 +24,18 @@ Seq[Any](format.raw/*1.4*/("""
 
 """),_display_(Seq[Any](/*3.2*/main("")/*3.10*/{_display_(Seq[Any](format.raw/*3.11*/("""
 		<ul>
-			<p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p>
-			<p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p>
-			<p><a href=""""),_display_(Seq[Any](/*7.17*/controllers/*7.28*/.designer.routes.Designer.designermain)),format.raw/*7.66*/("""">技师管理</a></p>
-			<ul>
+			<li><p><a href = "my_salon.html" target = "salon_main">我的店铺</a></p></li>
+			<li><p><a href = "basic_info_control.html" target = "salon_main">基本信息管理</a></p></li>
+			<li><p><a href=""""),_display_(Seq[Any](/*7.21*/controllers/*7.32*/.designer.routes.Designer.designermain)),format.raw/*7.70*/("""">技师管理</a></p></li>
+			<li><ul>
 				<li><a href=""""),_display_(Seq[Any](/*9.19*/controllers/*9.30*/.designer.routes.Designer.designermain)),format.raw/*9.68*/("""">我的技师</a></li>
-			</ul>
-			<p><a href=""""),_display_(Seq[Any](/*11.17*/controllers/*11.28*/.record.routes.Records.recordmain)),format.raw/*11.61*/("""">预约管理</a></p>
-			<p><a href = "#" target = "salon_main">评论管理</a></p>
-			<p><a href = "service_control.html" target = "salon_main">服务管理</a></p>
-			<p><a href = "#" target = "salon_main">优惠劵管理</a></p>
-			<p><a href = "trend_control.html" target = "salon_main">动态管理</a></p>
-			<p><a href = "#" target = "salon_main">店铺装修</a></p>
+			</ul></li>
+			<li><p><a href=""""),_display_(Seq[Any](/*11.21*/controllers/*11.32*/.record.routes.Records.recordmain(1))),format.raw/*11.68*/("""">预约管理</a></p></li>
+			<li><p><a href = "#" target = "salon_main">评论管理</a></p></li>
+			<li><p><a href = "service_control.html" target = "salon_main">服务管理</a></p></li>
+			<li><p><a href = "#" target = "salon_main">优惠劵管理</a></p></li>
+			<li><p><a href = "trend_control.html" target = "salon_main">动态管理</a></p></li>
+			<li><p><a href = "#" target = "salon_main">店铺装修</a></p></li>
 		</ul>	
 """)))})))}
     }
@@ -48,11 +49,11 @@ Seq[Any](format.raw/*1.4*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 25 10:47:16 CST 2014
+                    DATE: Wed Feb 26 13:43:34 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/designer/designerNav.scala.html
-                    HASH: 0ae1301c1ad6e91938afd9cf6f3285c632b0e664
-                    MATRIX: 564->1|659->3|698->8|714->16|752->17|961->191|980->202|1039->240|1117->283|1136->294|1195->332|1274->375|1294->386|1349->419
-                    LINES: 19->1|22->1|24->3|24->3|24->3|28->7|28->7|28->7|30->9|30->9|30->9|32->11|32->11|32->11
+                    HASH: fed9229b7a11f2fe8af174dbbf067ff84530250d
+                    MATRIX: 595->1|690->3|729->8|745->16|783->17|1014->213|1033->224|1092->262|1179->314|1198->325|1257->363|1345->415|1365->426|1423->462
+                    LINES: 20->1|23->1|25->3|25->3|25->3|29->7|29->7|29->7|31->9|31->9|31->9|33->11|33->11|33->11
                     -- GENERATED --
                 */
             
