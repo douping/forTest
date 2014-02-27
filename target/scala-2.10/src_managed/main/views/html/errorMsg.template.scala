@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object errorMsg extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[Record],play.api.templates.HtmlFormat.Appendable] {
 
@@ -33,11 +34,11 @@ Seq[Any](format.raw/*1.22*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 17:59:29 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/errorMsg.scala.html
-                    HASH: 6d5c8b6823d24be9f596b8fdca992f0b3fa02353
-                    MATRIX: 565->1|679->21|721->29|747->34
-                    LINES: 19->1|22->1|24->3|24->3
+                    HASH: 9168daf91183903a9f563a86a4d0f5e2a2d6cf0f
+                    MATRIX: 596->1|710->21|752->29|778->34
+                    LINES: 20->1|23->1|25->3|25->3
                     -- GENERATED --
                 */
             

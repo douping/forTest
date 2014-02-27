@@ -12,23 +12,26 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
-object recordmain extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template2[List[Record],Long,play.api.templates.HtmlFormat.Appendable] {
+object recordmain extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template4[List[Record],Long,Int,Int,play.api.templates.HtmlFormat.Appendable] {
 
     /**/
-    def apply/*1.2*/(records:List[Record],count:Long):play.api.templates.HtmlFormat.Appendable = {
+    def apply/*1.2*/(records: List[Record], count: Long, pages: Int, page:Int):play.api.templates.HtmlFormat.Appendable = {
         _display_ {import helper._
 
 import helper.twitterBootstrap._
 
 
-Seq[Any](format.raw/*1.35*/("""
+Seq[Any](format.raw/*1.60*/("""
 """),_display_(Seq[Any](/*4.2*/main("s")/*4.11*/{_display_(Seq[Any](format.raw/*4.12*/("""
 	<div class="content-link">
 			"""),_display_(Seq[Any](/*6.5*/views/*6.10*/.html.record.recordMenu())),format.raw/*6.35*/("""
 	</div>	
 	<div class="content-core">
 		<p>总计<span>"""),_display_(Seq[Any](/*9.15*/count)),format.raw/*9.20*/("""</span>个预约</p>
+		<input type="hidden" name="page" id="page" value=""""),_display_(Seq[Any](/*10.54*/page)),format.raw/*10.58*/("""">
+		<input type="hidden" name="totalPage" id="totalPage" value=""""),_display_(Seq[Any](/*11.64*/pages)),format.raw/*11.69*/("""">
 		<div>                           
                                          开始日期：<input type="date">&nbsp;&nbsp;
                                         
@@ -43,7 +46,7 @@ Seq[Any](format.raw/*1.35*/("""
            
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             
-            <a href=""""),_display_(Seq[Any](/*24.23*/controllers/*24.34*/.record.routes.Records.addRecord)),format.raw/*24.66*/("""">添加预约</a>
+            <a href=""""),_display_(Seq[Any](/*26.23*/controllers/*26.34*/.record.routes.Records.addRecord)),format.raw/*26.66*/("""">添加预约</a>
         </div>
 		<table id="recordmain" border="1px solid black" cellspacing="0" cellpadding="0">
 			<thead>
@@ -61,55 +64,72 @@ Seq[Any](format.raw/*1.35*/("""
 				</tr>
 			</thead>
 			<tbody>
-				"""),_display_(Seq[Any](/*42.6*/records/*42.13*/.map/*42.17*/{re=>_display_(Seq[Any](format.raw/*42.22*/("""
+				"""),_display_(Seq[Any](/*44.6*/records/*44.13*/.map/*44.17*/{re=>_display_(Seq[Any](format.raw/*44.22*/("""
 				<tr>
-					<td><a href=""""),_display_(Seq[Any](/*44.20*/controllers/*44.31*/.record.routes.Records.recordview)),format.raw/*44.64*/("""">"""),_display_(Seq[Any](/*44.67*/re/*44.69*/.id)),format.raw/*44.72*/("""</a></td>                        
-					<td>"""),_display_(Seq[Any](/*45.11*/re/*45.13*/.serviceStart.format("yyyy-MM-dd hh:mm"))),format.raw/*45.53*/("""</td>
-					<td>"""),_display_(Seq[Any](/*46.11*/re/*46.13*/.serviceEnd.format("yyyy-MM-dd hh:mm"))),format.raw/*46.51*/("""</td>
-					<td>"""),_display_(Seq[Any](/*47.11*/re/*47.13*/.serviceItem)),format.raw/*47.25*/("""</td>
-					<td>"""),_display_(Seq[Any](/*48.11*/re/*48.13*/.userName)),format.raw/*48.22*/("""</td>
-					<td>"""),_display_(Seq[Any](/*49.11*/re/*49.13*/.userPhone)),format.raw/*49.23*/("""</td>
-					<td>"""),_display_(Seq[Any](/*50.11*/re/*50.13*/.serviceDesigner)),format.raw/*50.29*/("""</td>
+					<td><a href=""""),_display_(Seq[Any](/*46.20*/controllers/*46.31*/.record.routes.Records.recordview(re.id))),format.raw/*46.71*/("""">"""),_display_(Seq[Any](/*46.74*/re/*46.76*/.id)),format.raw/*46.79*/("""</a></td>                        
+					<td>"""),_display_(Seq[Any](/*47.11*/re/*47.13*/.serviceStart.format("yyyy-MM-dd hh:mm"))),format.raw/*47.53*/("""</td>
+					<td>"""),_display_(Seq[Any](/*48.11*/re/*48.13*/.serviceEnd.format("yyyy-MM-dd hh:mm"))),format.raw/*48.51*/("""</td>
+					<td>"""),_display_(Seq[Any](/*49.11*/re/*49.13*/.serviceItem)),format.raw/*49.25*/("""</td>
+					<td>"""),_display_(Seq[Any](/*50.11*/re/*50.13*/.userName)),format.raw/*50.22*/("""</td>
+					<td>"""),_display_(Seq[Any](/*51.11*/re/*51.13*/.userPhone)),format.raw/*51.23*/("""</td>
+					<td>"""),_display_(Seq[Any](/*52.11*/re/*52.13*/.serviceDesigner)),format.raw/*52.29*/("""</td>
 					
 						<td id="service-status">
-						"""),_display_(Seq[Any](/*53.8*/if(re.serviceStatus==1)/*53.31*/{_display_(Seq[Any](format.raw/*53.32*/("""
+						"""),_display_(Seq[Any](/*55.8*/if(re.serviceStatus==2)/*55.31*/{_display_(Seq[Any](format.raw/*55.32*/("""
 						已过期
-						""")))})),format.raw/*55.8*/("""
-						"""),_display_(Seq[Any](/*56.8*/if(re.serviceStatus==2)/*56.31*/{_display_(Seq[Any](format.raw/*56.32*/("""
+						""")))})),format.raw/*57.8*/("""
+						"""),_display_(Seq[Any](/*58.8*/if(re.serviceStatus==0)/*58.31*/{_display_(Seq[Any](format.raw/*58.32*/("""
 						预约中	
-						""")))})),format.raw/*58.8*/("""
-						"""),_display_(Seq[Any](/*59.8*/if(re.serviceStatus==0)/*59.31*/{_display_(Seq[Any](format.raw/*59.32*/("""
+						""")))})),format.raw/*60.8*/("""
+						"""),_display_(Seq[Any](/*61.8*/if(re.serviceStatus==1)/*61.31*/{_display_(Seq[Any](format.raw/*61.32*/("""
 						已消费
-						""")))})),format.raw/*61.8*/("""
+						""")))})),format.raw/*63.8*/("""
+						"""),_display_(Seq[Any](/*64.8*/if(-1 == re.serviceStatus)/*64.34*/{_display_(Seq[Any](format.raw/*64.35*/("""
+						已取消
+						""")))})),format.raw/*66.8*/("""
 					</td>
-					<td>"""),_display_(Seq[Any](/*63.11*/re/*63.13*/.costTotal)),format.raw/*63.23*/("""</td>
+					<td>"""),_display_(Seq[Any](/*68.11*/re/*68.13*/.costTotal)),format.raw/*68.23*/("""</td>
 					<td>
-					<a href="#">取消</a>&nbsp;<a href="#">过期</a>&nbsp;<a href="#">已完成</a>
+					<a href=""""),_display_(Seq[Any](/*70.16*/controllers/*70.27*/.record.routes.Records.cancelRecord(re.id))),format.raw/*70.69*/("""">取消</a>&nbsp;
+					<a href=""""),_display_(Seq[Any](/*71.16*/controllers/*71.27*/.record.routes.Records.overdateRecord(re.id))),format.raw/*71.71*/("""">过期</a>&nbsp;
+					<a href=""""),_display_(Seq[Any](/*72.16*/controllers/*72.27*/.record.routes.Records.finishRecord(re.id))),format.raw/*72.69*/("""">已完成</a>
 					
 					</td>
 				</tr>
-				""")))})),format.raw/*69.6*/("""
+				""")))})),format.raw/*76.6*/("""
 			</tbody>
 		</table>
+		<div class="page-limit">
+			<a href="javascript:toUpPage();">上一页</a>
+			"""),_display_(Seq[Any](/*81.5*/for(i <-1 to pages) yield /*81.24*/{_display_(Seq[Any](format.raw/*81.25*/("""
+				"""),_display_(Seq[Any](/*82.6*/if(page==i)/*82.17*/{_display_(Seq[Any](format.raw/*82.18*/("""
+					<a href="javascript:toPage("""),_display_(Seq[Any](/*83.34*/i)),format.raw/*83.35*/(""");" class="pagelink">"""),_display_(Seq[Any](/*83.57*/i)),format.raw/*83.58*/("""</a>
+				""")))}/*84.6*/else/*84.10*/{_display_(Seq[Any](format.raw/*84.11*/("""
+					<a href="javascript:toPage("""),_display_(Seq[Any](/*85.34*/i)),format.raw/*85.35*/(""");">"""),_display_(Seq[Any](/*85.40*/i)),format.raw/*85.41*/("""</a>
+				""")))})),format.raw/*86.6*/("""
+				
+			""")))})),format.raw/*88.5*/("""
+			<a href="javascript:toNextPage();">下一页</a>
+		</div>
 	</div>
-""")))})),format.raw/*73.2*/("""
+""")))})),format.raw/*92.2*/("""
 """))}
     }
     
-    def render(records:List[Record],count:Long): play.api.templates.HtmlFormat.Appendable = apply(records,count)
+    def render(records:List[Record],count:Long,pages:Int,page:Int): play.api.templates.HtmlFormat.Appendable = apply(records,count,pages,page)
     
-    def f:((List[Record],Long) => play.api.templates.HtmlFormat.Appendable) = (records,count) => apply(records,count)
+    def f:((List[Record],Long,Int,Int) => play.api.templates.HtmlFormat.Appendable) = (records,count,pages,page) => apply(records,count,pages,page)
     
     def ref: this.type = this
 
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 25 10:34:55 CST 2014
+                    DATE: Thu Feb 27 08:35:05 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/recordmain.scala.html
-                    HASH: ea31a429afe05269921c6c1c0a695bd7cd05a0b2
-                    MATRIX: 579->1|758->34|795->90|812->99|850->100|919->135|932->140|978->165|1068->220|1094->225|1881->976|1901->987|1955->1019|2365->1394|2381->1401|2394->1405|2437->1410|2504->1441|2524->1452|2579->1485|2618->1488|2629->1490|2654->1493|2735->1538|2746->1540|2808->1580|2861->1597|2872->1599|2932->1637|2985->1654|2996->1656|3030->1668|3083->1685|3094->1687|3125->1696|3178->1713|3189->1715|3221->1725|3274->1742|3285->1744|3323->1760|3411->1813|3443->1836|3482->1837|3533->1857|3577->1866|3609->1889|3648->1890|3700->1911|3744->1920|3776->1943|3815->1944|3866->1964|3926->1988|3937->1990|3969->2000|4127->2127|4195->2164
-                    LINES: 19->1|25->1|26->4|26->4|26->4|28->6|28->6|28->6|31->9|31->9|46->24|46->24|46->24|64->42|64->42|64->42|64->42|66->44|66->44|66->44|66->44|66->44|66->44|67->45|67->45|67->45|68->46|68->46|68->46|69->47|69->47|69->47|70->48|70->48|70->48|71->49|71->49|71->49|72->50|72->50|72->50|75->53|75->53|75->53|77->55|78->56|78->56|78->56|80->58|81->59|81->59|81->59|83->61|85->63|85->63|85->63|91->69|95->73
+                    HASH: 9a6c82deaff94c70a03c3718b5b6c53e53514bef
+                    MATRIX: 618->1|822->59|859->115|876->124|914->125|983->160|996->165|1042->190|1132->245|1158->250|1263->319|1289->323|1392->390|1419->395|2194->1134|2214->1145|2268->1177|2678->1552|2694->1559|2707->1563|2750->1568|2817->1599|2837->1610|2899->1650|2938->1653|2949->1655|2974->1658|3055->1703|3066->1705|3128->1745|3181->1762|3192->1764|3252->1802|3305->1819|3316->1821|3350->1833|3403->1850|3414->1852|3445->1861|3498->1878|3509->1880|3541->1890|3594->1907|3605->1909|3643->1925|3731->1978|3763->2001|3802->2002|3853->2022|3897->2031|3929->2054|3968->2055|4020->2076|4064->2085|4096->2108|4135->2109|4186->2129|4230->2138|4265->2164|4304->2165|4355->2185|4415->2209|4426->2211|4458->2221|4527->2254|4547->2265|4611->2307|4678->2338|4698->2349|4764->2393|4831->2424|4851->2435|4915->2477|4992->2523|5131->2627|5166->2646|5205->2647|5247->2654|5267->2665|5306->2666|5377->2701|5400->2702|5458->2724|5481->2725|5510->2736|5523->2740|5562->2741|5633->2776|5656->2777|5697->2782|5720->2783|5762->2794|5805->2806|5905->2875
+                    LINES: 20->1|26->1|27->4|27->4|27->4|29->6|29->6|29->6|32->9|32->9|33->10|33->10|34->11|34->11|49->26|49->26|49->26|67->44|67->44|67->44|67->44|69->46|69->46|69->46|69->46|69->46|69->46|70->47|70->47|70->47|71->48|71->48|71->48|72->49|72->49|72->49|73->50|73->50|73->50|74->51|74->51|74->51|75->52|75->52|75->52|78->55|78->55|78->55|80->57|81->58|81->58|81->58|83->60|84->61|84->61|84->61|86->63|87->64|87->64|87->64|89->66|91->68|91->68|91->68|93->70|93->70|93->70|94->71|94->71|94->71|95->72|95->72|95->72|99->76|104->81|104->81|104->81|105->82|105->82|105->82|106->83|106->83|106->83|106->83|107->84|107->84|107->84|108->85|108->85|108->85|108->85|109->86|111->88|115->92
                     -- GENERATED --
                 */
             

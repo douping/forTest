@@ -60,7 +60,7 @@ trait UserDAO extends ModelCompanion[Users, ObjectId]{
 	 */
 	def toRegister(userName: String, password: String, email: String,phone: String, 
     sex: String, city: String, intro: String){
-	  coll.insert(MongoDBObject("userName" -> userName, "password" -> password, "email" -> email,
+	  coll.insert(MongoDBObject("name" -> userName, "password" -> password, "email" -> email,
 	      "phone" -> phone, "sex" -> sex, "city" -> city, "intro" -> intro))
 	}
 	/**

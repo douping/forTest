@@ -1,31 +1,43 @@
-@(message: String)
+@(record:Form[Record])
 @import helper._
 @import helper.twitterBootstrap._
+
 @main("message"){
 		
 	<div class="content-core">
 		<h2>预约详情</h2>
-		@form(routes.User.toCreaterecord){
+		@form(controllers.record.routes.Records.toCreateRecords){
 		<table border="1px solid black" cellspacing="0" cellpadding="0" class="recordview-table">
 			<tr>
-				<td width="100px">顾客留言</td>
-				<td width="600px"></td>
+				<td width="100px">店铺</td>
+				<td width="600px"><input name="store"></td>
 			</tr>
+			
 			<tr>
 				<td>预约状态</td>
 				<td><select name="serviceStatus">
-					<option value="1">过期</option>
-					<option value="2">预约</option>
-					<option value="3">取消</option>
+					<option value="2">过期</option>
+					<option value="0">预约</option>
+					<option value="1">完成消费</option>
+					<option value="-1">取消</option>
 				</select></td>
+			</tr>
+			<tr>
+				<td>开始日期</td>
+				<td><input type="date" name="serviceStart"></td>
+			</tr>
+			<tr>
+				<td>结束日期</td>
+				<td><input type="date" name="serviceEnd"></td>
 			</tr>
 			<tr>
 				<td>指定人员</td>
 				<td><input type="checkbox" name="serviceDesigner" value="zhangsan">张三</td>
 			</tr>
+			
 			<tr>
 				<td>服务项目</td>
-				<td><input type="checkbox" name="serviceItem" value="spa">张三</td>
+				<td><input type="checkbox" name="serviceItem" value="spa">spa</td>
 			</tr>
 			<tr>
 				<td>会员名</td>

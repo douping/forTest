@@ -30,12 +30,11 @@ case class Record (id: ObjectId = new ObjectId,
 			  )
 
 object Record extends ModelCompanion[Record, ObjectId]{
+  val dao = new SalatDAO[Record, ObjectId](collection = mongoCollection("record")){}
   
-  val dao = new SalatDAO[Record, ObjectId](collection= mongoCollection("record")){}
+  def findById(id:ObjectId):Option[Record]= dao.findOne(MongoDBObject("_id" -> id))
   
-  def findById(id:ObjectId)= dao.findOne(MongoDBObject("id" -> id))
-  
-  def findAllrecord(store:String):List[Record] = dao.find(MongoDBObject("store" -> store)).toList
+  def findAllrecord(store:String,page:Int,pageSize:Int):List[Record] = dao.find(MongoDBObject("store" -> store)).skip((page-1)*pageSize).limit(pageSize).toList
   
   def createRecord(record:Record) = dao.save(record, WriteConcern.Safe)
   

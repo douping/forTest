@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object register extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[scala.Tuple7[String, scala.Tuple2[String, String], String, String, String, scala.Tuple2[String, String], String]],play.api.templates.HtmlFormat.Appendable] {
 
@@ -100,11 +101,11 @@ Seq[Any](format.raw/*1.91*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Feb 17 11:25:21 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/register.scala.html
-                    HASH: a0d2d9c0fd264ba42c794de309b07929f4001b93
-                    MATRIX: 671->1|906->90|934->145|971->148|995->164|1033->165|1155->252|1192->280|1231->281|3307->2326
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|32->10|32->10|32->10|88->66
+                    HASH: d0e185540c4620762083b44cca146317cf66746f
+                    MATRIX: 702->1|937->90|965->145|1002->148|1026->164|1064->165|1186->252|1223->280|1262->281|3338->2326
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|33->10|33->10|33->10|89->66
                     -- GENERATED --
                 */
             

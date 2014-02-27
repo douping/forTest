@@ -1,6 +1,6 @@
 // @SOURCE:E:/PD/playtest/forTest/conf/routes
-// @HASH:7b219d1a6d517ea4d12dd4c4512abc26c0cf0433
-// @DATE:Fri Feb 21 18:40:55 CST 2014
+// @HASH:24ad5d8a7e89fa9474149586d568c2064d90c6da
+// @DATE:Wed Feb 26 13:38:46 CST 2014
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -8,7 +8,7 @@ import play.core.Router._
 import play.core.j._
 
 import play.api.mvc._
-
+import se.radley.plugin.salat.Binders._
 
 import Router.queryString
 
@@ -141,6 +141,9 @@ def designersearch(): Call = {
 }
                   
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -149,6 +152,9 @@ def designersearch(): Call = {
 // @LINE:33
 package controllers.record {
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -164,9 +170,15 @@ def toCreateRecords(): Call = {
 }
                                                 
 
+// @LINE:47
+def overdateRecord(id:ObjectId): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "overdateRecord/" + implicitly[PathBindable[ObjectId]].unbind("id", id))
+}
+                                                
+
 // @LINE:35
-def recordview(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "recordview")
+def recordview(id:ObjectId): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "recordview/" + implicitly[PathBindable[ObjectId]].unbind("id", id))
 }
                                                 
 
@@ -176,15 +188,27 @@ def addRecord(): Call = {
 }
                                                 
 
-// @LINE:33
-def recordmain(): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "recordmain")
+// @LINE:45
+def cancelRecord(id:ObjectId): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "cancelRecord/" + implicitly[PathBindable[ObjectId]].unbind("id", id))
 }
                                                 
 
 // @LINE:43
 def selectDesignerRecord(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "selectDesignerRecord")
+}
+                                                
+
+// @LINE:49
+def finishRecord(id:ObjectId): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "finishRecord/" + implicitly[PathBindable[ObjectId]].unbind("id", id))
+}
+                                                
+
+// @LINE:33
+def recordmain(page:Int): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "recordmain/" + implicitly[PathBindable[Int]].unbind("page", page))
 }
                                                 
 
@@ -388,6 +412,9 @@ def designersearch : JavascriptReverseRoute = JavascriptReverseRoute(
 }
         
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -396,6 +423,9 @@ def designersearch : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:33
 package controllers.record.javascript {
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -416,12 +446,23 @@ def toCreateRecords : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:47
+def overdateRecord : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.overdateRecord",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "overdateRecord/" + (""" + implicitly[PathBindable[ObjectId]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
 // @LINE:35
 def recordview : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.record.Records.recordview",
    """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordview"})
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordview/" + (""" + implicitly[PathBindable[ObjectId]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -438,12 +479,12 @@ def addRecord : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
-def recordmain : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.record.Records.recordmain",
+// @LINE:45
+def cancelRecord : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.cancelRecord",
    """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordmain"})
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cancelRecord/" + (""" + implicitly[PathBindable[ObjectId]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -455,6 +496,28 @@ def selectDesignerRecord : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "selectDesignerRecord"})
+      }
+   """
+)
+                        
+
+// @LINE:49
+def finishRecord : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.finishRecord",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "finishRecord/" + (""" + implicitly[PathBindable[ObjectId]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:33
+def recordmain : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.record.Records.recordmain",
+   """
+      function(page) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recordmain/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("page", page)})
       }
    """
 )
@@ -607,6 +670,9 @@ def designersearch(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
         
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -616,6 +682,9 @@ def designersearch(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 package controllers.record.ref {
 
 
+// @LINE:49
+// @LINE:47
+// @LINE:45
 // @LINE:43
 // @LINE:41
 // @LINE:39
@@ -631,9 +700,15 @@ def toCreateRecords(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:47
+def overdateRecord(id:ObjectId): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.overdateRecord(id), HandlerDef(this, "controllers.record.Records", "overdateRecord", Seq(classOf[ObjectId]), "GET", """""", _prefix + """overdateRecord/$id<[^/]+>""")
+)
+                      
+
 // @LINE:35
-def recordview(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.record.Records.recordview(), HandlerDef(this, "controllers.record.Records", "recordview", Seq(), "GET", """""", _prefix + """recordview""")
+def recordview(id:ObjectId): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.recordview(id), HandlerDef(this, "controllers.record.Records", "recordview", Seq(classOf[ObjectId]), "GET", """""", _prefix + """recordview/$id<[^/]+>""")
 )
                       
 
@@ -643,15 +718,27 @@ def addRecord(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:33
-def recordmain(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.record.Records.recordmain(), HandlerDef(this, "controllers.record.Records", "recordmain", Seq(), "GET", """record managment""", _prefix + """recordmain""")
+// @LINE:45
+def cancelRecord(id:ObjectId): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.cancelRecord(id), HandlerDef(this, "controllers.record.Records", "cancelRecord", Seq(classOf[ObjectId]), "GET", """""", _prefix + """cancelRecord/$id<[^/]+>""")
 )
                       
 
 // @LINE:43
 def selectDesignerRecord(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.record.Records.selectDesignerRecord(), HandlerDef(this, "controllers.record.Records", "selectDesignerRecord", Seq(), "GET", """""", _prefix + """selectDesignerRecord""")
+)
+                      
+
+// @LINE:49
+def finishRecord(id:ObjectId): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.finishRecord(id), HandlerDef(this, "controllers.record.Records", "finishRecord", Seq(classOf[ObjectId]), "GET", """""", _prefix + """finishRecord/$id<[^/]+>""")
+)
+                      
+
+// @LINE:33
+def recordmain(page:Int): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.record.Records.recordmain(page), HandlerDef(this, "controllers.record.Records", "recordmain", Seq(classOf[Int]), "GET", """record managment""", _prefix + """recordmain/$page<[^/]+>""")
 )
                       
 

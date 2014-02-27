@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object loginSuccess extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[String,play.api.templates.HtmlFormat.Appendable] {
 
@@ -38,11 +39,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Feb 17 11:25:21 CST 2014
+                    DATE: Wed Feb 26 10:21:03 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/loginSuccess.scala.html
-                    HASH: f5b55c2bb86ca1a025b11e81a8d4115a5a79c7b3
-                    MATRIX: 563->1|674->18|713->23|744->46|783->48|876->106|904->113
-                    LINES: 19->1|22->1|24->3|24->3|24->3|26->5|26->5
+                    HASH: e6b3cc92a5afcd923562a688ed096656cd53da52
+                    MATRIX: 594->1|705->18|744->23|775->46|814->48|907->106|935->113
+                    LINES: 20->1|23->1|25->3|25->3|25->3|27->5|27->5
                     -- GENERATED --
                 */
             

@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object createrecord extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[Form[Record],play.api.templates.HtmlFormat.Appendable] {
 
@@ -38,9 +39,10 @@ Seq[Any](format.raw/*1.23*/("""
 			<tr>
 				<td>预约状态</td>
 				<td><select name="serviceStatus">
-					<option value="1">过期</option>
-					<option value="2">预约</option>
-					<option value="3">取消</option>
+					<option value="2">过期</option>
+					<option value="0">预约</option>
+					<option value="1">完成消费</option>
+					<option value="-1">取消</option>
 				</select></td>
 			</tr>
 			<tr>
@@ -77,9 +79,9 @@ Seq[Any](format.raw/*1.23*/("""
 				<td><input name="costTotal"></td>
 			</tr>
 		</table>
-		<input type="button" value="返回预约履历" onclick="window.location.href='"""),_display_(Seq[Any](/*58.71*/controllers/*58.82*/.record.routes.Records.recordmain)),format.raw/*58.115*/("""';"/>
+		<input type="button" value="返回预约履历" onclick="window.location.href='"""),_display_(Seq[Any](/*59.71*/controllers/*59.82*/.record.routes.Records.recordmain(1))),format.raw/*59.118*/("""';"/>
 		<input type="submit" value="提交">
-		""")))})),format.raw/*60.4*/("""
+		""")))})),format.raw/*61.4*/("""
 	</div>
 """)))})))}
     }
@@ -93,11 +95,11 @@ Seq[Any](format.raw/*1.23*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Thu Feb 20 18:06:51 CST 2014
+                    DATE: Wed Feb 26 13:46:47 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/createrecord.scala.html
-                    HASH: 3077730c83b4b9124403e3b61025b71ea7a2f066
-                    MATRIX: 576->1|743->22|771->77|808->80|831->95|869->96|958->151|1021->206|1059->207|2309->1421|2329->1432|2385->1465|2462->1511
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|31->9|31->9|31->9|80->58|80->58|80->58|82->60
+                    HASH: 1c3a5c89ef2ee529ac99cc587fa0a7c30163b193
+                    MATRIX: 607->1|774->22|802->77|839->80|862->95|900->96|989->151|1052->206|1090->207|2379->1460|2399->1471|2458->1507|2535->1553
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|32->9|32->9|32->9|82->59|82->59|82->59|84->61
                     -- GENERATED --
                 */
             

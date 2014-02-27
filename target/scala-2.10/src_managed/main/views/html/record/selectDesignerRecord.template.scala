@@ -12,6 +12,7 @@ import play.api.i18n._
 import play.api.mvc._
 import play.api.data._
 import views.html._
+import org.bson.types.ObjectId
 /**/
 object selectDesignerRecord extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,Format[play.api.templates.HtmlFormat.Appendable]](play.api.templates.HtmlFormat) with play.api.templates.Template1[String,play.api.templates.HtmlFormat.Appendable] {
 
@@ -84,11 +85,11 @@ Seq[Any](format.raw/*1.19*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 25 10:29:06 CST 2014
+                    DATE: Wed Feb 26 10:21:04 CST 2014
                     SOURCE: E:/PD/playtest/forTest/app/views/record/selectDesignerRecord.scala.html
-                    HASH: 67459270aebf6e74a7e3aa0a031164a753741692
-                    MATRIX: 578->1|741->18|769->73|806->76|829->91|867->92|937->128|950->133|996->158|1291->417|1311->428|1371->466|1650->709|1670->720|1730->758|1897->889|1917->900|1977->938|2371->1296|2391->1307|2451->1345
-                    LINES: 19->1|25->1|26->4|27->5|27->5|27->5|29->7|29->7|29->7|39->17|39->17|39->17|44->22|44->22|44->22|50->28|50->28|50->28|61->39|61->39|61->39
+                    HASH: ec9e6eb59b0218ed7007ad41de843507a5ec3d7c
+                    MATRIX: 609->1|772->18|800->73|837->76|860->91|898->92|968->128|981->133|1027->158|1322->417|1342->428|1402->466|1681->709|1701->720|1761->758|1928->889|1948->900|2008->938|2402->1296|2422->1307|2482->1345
+                    LINES: 20->1|26->1|27->4|28->5|28->5|28->5|30->7|30->7|30->7|40->17|40->17|40->17|45->22|45->22|45->22|51->28|51->28|51->28|62->39|62->39|62->39
                     -- GENERATED --
                 */
             
