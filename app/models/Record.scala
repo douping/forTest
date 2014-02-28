@@ -41,5 +41,10 @@ object Record extends ModelCompanion[Record, ObjectId]{
   
   def findByCondition(store:String,designer:String) = dao.find(MongoDBObject("store" -> store, "designer" -> designer )).toList
       
-  
+  def findByQuery(query:DBObject,page:Int,pageSize:Int) = {
+    dao.find(query).sort(MongoDBObject("serviceStart" -> -1)).skip((page-1)*pageSize).limit(pageSize).toList
+  }
+  def countByCondition(query:DBObject) = {
+    dao.count(query)
+  }
 }

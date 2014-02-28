@@ -55,29 +55,30 @@ object Records extends Controller{
   	 * 条件检索查询
   	 */
   	def findRecordByCondition = Action {implicit request =>
-  	  
   	  val re = request.session.get("records").get
-  	  var designer = request.getQueryString("serviceDesigner")
-  	  var serviceStart = request.getQueryString("serviceStart")
-  	  var serviceStatus = request.getQueryString("serviceStatus")
-  	  designer match{
+  	  val designer = request.getQueryString("serviceDesigner")
+  	  val serviceStart = request.getQueryString("serviceStart")
+  	  val serviceStatus = request.getQueryString("serviceStatus")
+  	  /*designer match{
   	    case Some(e)=>e
   	    case _=>None
-  	  }
+  	  }*/
   	  val builder = MongoDBObject.newBuilder
   	  builder +="store" -> re
-  	  if(designer!=None){
+  	  println("designer..."+designer.get)
+  	  println("serviceStart!=None "+(!(serviceStart.get).equals("")))
+  	  if(!(designer.get).equals("")){
   	    builder +="serviceDesigner" -> designer.get
   	  }
-  	  if(serviceStart!=None){
+  	  if(!(serviceStart.get).equals("")){
   	    builder +="serviceStart" -> serviceStart.get
   	  }
   	  if(serviceStatus!=None){
-  	    builder +="serviceStatus" -> serviceStatus.get
+  	    builder +="serviceStatus" -> serviceStatus.get.toInt
   	  }
   	  val query=builder.result
-  	  val records = Record.find(query).skip(0).limit(5).toList
-  	  val count = Record.counts(re)
+  	  val records = Record.findByQuery(query, 1, pageSize)
+  	  val count = Record.countByCondition(query)
 	  var pages:Int = 0
 	  if(count % pageSize == 0){
 	    pages = count.toInt/ pageSize

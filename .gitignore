@@ -1,6 +1,6 @@
 # ignore all dot files;
 .*
-
+*.bak
 # except for .gitignore file;
 !.gitignore
 
@@ -16,3 +16,4 @@ target
 test-result
 tmp
 dist
+.target
