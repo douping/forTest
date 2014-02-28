@@ -1,11 +1,18 @@
+# ignore all dot files;
+.*
+
+# except for .gitignore file;
+!.gitignore
+
+# ignore play! working directory;
+bin
+db
+eclipse
+log
 logs
-.history
+project/project
+project/target
+target
+test-result
+tmp
 dist
-/.idea
-/*.iml
-/out
-/.idea_modules
-/.classpath
-/.project
-/RUNNING_PID
-/.settings
